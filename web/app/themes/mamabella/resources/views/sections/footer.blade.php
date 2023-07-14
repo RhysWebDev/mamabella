@@ -26,7 +26,8 @@
                 </div>
             </div>
             <div class="col-span-2">
-                <h4 class="font-bold font-secondary text-secondary text-[17px] mb-[2rem]">Send us a sample</h4>
+                <h4 class="font-bold font-secondary text-secondary text-[17px] mt-[3rem] mb-[2rem]">Send us a sample
+                </h4>
                 <div class="footer_menu text-[17px] font-secondary">
                     <a class="block" href="#">5 Hatton Street</a>
                     <a class="block" href="#">Broughton</a>
