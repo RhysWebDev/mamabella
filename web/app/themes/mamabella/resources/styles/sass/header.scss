@@ -17,3 +17,9 @@
 .menu-separator:last-child {
   display: none;
 }
+
+.nav_wrap {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}

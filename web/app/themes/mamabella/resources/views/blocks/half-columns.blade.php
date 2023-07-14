@@ -50,7 +50,7 @@
                     {{ get_field('column_title') }}
                 </h2>
                 <img class="absolute left w-full bar-spacer"
-                    src="http://mamabella.test/app/uploads/2023/07/Group-2003.png">
+                    src="https://mamabella.dashdev.uk/app/uploads/2023/07/Group-2003.png">
                 <div class="team_wrapper pt-[1.5rem]">
                     @if (have_rows('team_members'))
                         @while (have_rows('team_members'))

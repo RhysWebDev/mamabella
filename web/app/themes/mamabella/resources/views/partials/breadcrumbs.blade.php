@@ -67,11 +67,11 @@
 @endphp
 
 @if (!empty($breadcrumbs))
-    <ul id="breadcrumb">
+    <div id="breadcrumb" class="flex flex-row gap-x-[2rem]">
         @foreach ($breadcrumbs as $breadcrumb)
-            <li>
-                <a href="{{ $breadcrumb['url'] }}">{{ $breadcrumb['text'] }}</a>
-            </li>
+            <div>
+                <a class="text-white" href="{{ $breadcrumb['url'] }}">{{ $breadcrumb['text'] }}</a>
+            </div>
         @endforeach
-    </ul>
+    </div>
 @endif
