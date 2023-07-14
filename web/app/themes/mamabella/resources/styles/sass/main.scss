@@ -79,3 +79,13 @@ section {
 .scrollToBottom {
   cursor: pointer;
 }
+
+.body-wrap-color {
+  background: #f6f9fb;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

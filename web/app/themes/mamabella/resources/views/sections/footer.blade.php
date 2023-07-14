@@ -41,7 +41,7 @@
                 hello@mamabella.co.uk
 
             </div>
-            <div class="col-span-4 bg-secondary py-[1rem] mt-[-1.5rem] text-center">
+            <div class="col-span-4 bg-secondary py-[1rem] md:mt-[-1.5rem] text-center mt-[3rem]">
                 <h4 class="font-bold font-primary text-center text-primary text-[30px]">Sign up for News</h4>
                 <span class="text-[17px] text-primary text-center">Receive the latest news, offer and reviews from
                     us</span>
