@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './sass/variables.scss';
+@import './sass/typography.scss';
+@import './sass/main.scss';
+@import './sass/header.scss';
+@import './sass/inputs.scss';
+@import './sass/blocks/featured-article.scss';
+@import './sass/posts/post.scss';
+@import './sass/blocks/stat-banner.scss';
+@import './sass/blocks/dupe-banner.scss';
+@import './sass/products/product.scss';
+@import './sass/facet/facet-overwrites.scss';
+@import './sass/blocks/product-filter.scss';
+@import './sass/blocks/editors.picks.scss';
+@import './sass/blocks/advertisement.scss';
+@import './sass/slick-overwrites.scss';
+
+@import './sass/components/spacer.scss';
+@import './sass/components/buttons.scss';
+
+@import 'slick-carousel/slick/slick.css';

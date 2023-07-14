@@ -1,0 +1,15 @@
+.ask_experts {
+  text-shadow: -3px -3px 0 theme('colors.primary'),
+    3px -3px 0 theme('colors.primary'), -3px 3px 0 theme('colors.primary'),
+    3px 3px 0 theme('colors.primary');
+  color: white;
+}
+
+.fancy_title {
+  font-size: 50px;
+  font-weight: bold;
+
+  &__outline {
+    text-shadow: 4px 4px white;
+  }
+}

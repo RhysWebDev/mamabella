@@ -1,0 +1,51 @@
+.title {
+  &__stars {
+    position: relative;
+    padding-top: 1.5rem;
+
+    &:before {
+      content: '';
+      width: 288px;
+      height: 68px;
+      display: block;
+      position: absolute;
+      left: -50px;
+      top: 0px;
+      background-image: url('http://mamabella.test/app/uploads/2023/07/stars.png');
+    }
+  }
+}
+
+.text-shadow-custom {
+  text-shadow: 4px 0px 0px #f6b4ac;
+  position: relative;
+
+  &:before {
+    background-image: url(http://mamabella.test/app/uploads/2023/07/Group-2002.png);
+    content: '';
+    display: block;
+    height: 142px;
+    left: 50%;
+    position: absolute;
+    top: 0;
+    width: 482px;
+    transform: translate(-50%);
+  }
+}
+
+.font {
+  &--signoff {
+    font-family: 'Sacramento', cursive;
+
+    &:before {
+      content: '';
+      width: 91px;
+      height: 44px;
+      display: block;
+      position: absolute;
+      left: 0px;
+      top: 80%;
+      background-image: url('http://mamabella.test/app/uploads/2023/07/Group-2002-1.png');
+    }
+  }
+}

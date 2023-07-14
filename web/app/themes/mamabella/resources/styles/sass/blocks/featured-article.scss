@@ -1,0 +1,105 @@
+.featured-article {
+  &__left {
+    border-top-left-radius: 4rem;
+    position: relative;
+    min-height: 650px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      filter: brightness(1.75);
+      opacity: 0.4;
+      top: 0px;
+      right: 0px;
+      background-image: url('http://mamabella.test/app/uploads/2023/05/Group-1685.png');
+      background-size: contain;
+      background-position: top right;
+      background-repeat: no-repeat;
+      width: 486.64px;
+      height: 222.98px;
+    }
+  }
+
+  &__title {
+    @media (max-width: 1024px) {
+      font-size: 36px;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+
+  &__content {
+    &::before {
+      content: '';
+      width: 45px;
+      height: 355px;
+      display: block;
+      position: absolute;
+      top: 200px;
+      background-image: url('http://mamabella.test/app/uploads/2023/05/Group-2009.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+
+  &__inner {
+    padding-left: 4rem;
+  }
+}
+
+.featured-article-swiper {
+  overflow: hidden;
+
+  .swiper_nav_wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+
+    .swiper-button-next {
+      opacity: 1;
+      cursor: pointer;
+      position: relative;
+      width: 43px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      position: relative;
+      cursor: pointer;
+      width: 43px;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+.swiper_nav_custom {
+  position: absolute;
+}
+
+.nav-arrow {
+  cursor: pointer;
+  transition: transform 0.7s ease;
+}
+
+.nav-arrow:hover {
+  transform: scale(1.3);
+  opacity: 1;
+
+  path {
+    opacity: 1;
+    fill: #f6b4ac !important;
+  }
+}
+
+.height-available {
+  height: fit-content;
+}

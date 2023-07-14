@@ -1,0 +1,67 @@
+{
+  "key": "group_hero",
+  "title": "Hero",
+  "fields": [
+    {
+      "key": "field_background_image",
+      "label": "Background Image",
+      "name": "background_image",
+      "type": "image",
+      "instructions": "Select the background image for the hero section.",
+      "required": true,
+      "return_format": "url",
+      "preview_size": "thumbnail"
+    },
+    {
+      "key": "field_title",
+      "label": "Title",
+      "name": "title",
+      "type": "text",
+      "instructions": "Enter the title for the hero section.",
+      "required": true
+    },
+    {
+      "key": "field_content",
+      "label": "Content",
+      "name": "content",
+      "type": "textarea",
+      "instructions": "Enter the content for the hero section.",
+      "required": true,
+      "rows": 4,
+      "new_lines": "br"
+    },
+    {
+      "key": "field_button",
+      "label": "Button Text",
+      "name": "button",
+      "type": "text",
+      "instructions": "Enter the text for the button.",
+      "required": true
+    },
+    {
+      "key": "field_button_link",
+      "label": "Button Link",
+      "name": "button_link",
+      "type": "url",
+      "instructions": "Enter the URL for the button link.",
+      "required": true
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "acf/hero"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Hero section"
+}

@@ -1,0 +1,13 @@
+.product__image {
+  img {
+    max-height: 185px;
+    min-height: 185px;
+    width: 135px;
+    object-fit: cover;
+  }
+}
+
+.product_sidebar {
+  max-height: 1100px;
+  overflow: hidden;
+}

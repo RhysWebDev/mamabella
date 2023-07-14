@@ -1,0 +1,8 @@
+.dupe-banner {
+  &__badge {
+    width: fit-content;
+    border-radius: 0.6rem;
+    background: $secondary-color;
+    padding: 0.2rem 0.8rem;
+  }
+}

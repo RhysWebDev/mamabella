@@ -1,0 +1,16 @@
+$primary-color: #26364b;
+$secondary-color: #f6b4ac;
+$accent-color: #79839c;
+$lightblue: #f0f5f9;
+$clr-white: #fff;
+$gradientbg: linear-gradient(
+  0deg,
+  rgba(255, 255, 255, 1) 0%,
+  rgba(187, 220, 241, 0.22452731092436973) 100%
+);
+
+$primary-font: 'gelica', sans-serif;
+$secondary-font: 'semplicitapro', sans-serif;
+
+// Clip path var
+$inset: calc(100% - 0.75rem);

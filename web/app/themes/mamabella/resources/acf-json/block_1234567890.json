@@ -1,0 +1,32 @@
+{
+  "key": "block_1234567890",
+  "title": "Custom Block",
+  "description": "A custom block with background image and two columns",
+  "category": "formatting",
+  "icon": "columns",
+  "keywords": ["background image", "columns"],
+  "supports": {
+    "align": ["wide", "full"],
+    "mode": {
+      "edit": true
+    },
+    "multiple": true
+  },
+  "example": {},
+  "attributes": {
+    "background_image": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "content": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "edit": "edit",
+  "save": "save"
+}

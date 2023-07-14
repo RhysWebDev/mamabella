@@ -1,0 +1,15 @@
+.btn {
+  &--outline {
+    color: theme('colors.primary');
+    border: 2px solid theme('colors.primary');
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background: theme('colors.primary');
+      color: $clr-white;
+    }
+  }
+}

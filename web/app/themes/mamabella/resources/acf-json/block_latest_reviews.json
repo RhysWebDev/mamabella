@@ -1,0 +1,101 @@
+{
+  "title": "Latest Reviews",
+  "name": "latest_reviews",
+  "description": "2-column carousel with background image",
+  "category": "formatting",
+  "icon": "star-filled",
+  "keywords": ["reviews", "carousel"],
+  "mode": "edit",
+  "align": "none",
+  "post_types": ["page", "post"],
+  "supports": {
+    "align": ["left", "right"],
+    "mode": true,
+    "multiple": false
+  },
+  "fields": [
+    {
+      "key": "field_background_image",
+      "label": "Background Image",
+      "name": "background_image",
+      "type": "image",
+      "required": true,
+      "instructions": "Select the background image for the section."
+    },
+    {
+      "key": "field_title",
+      "label": "Title",
+      "name": "title",
+      "type": "text",
+      "required": true,
+      "instructions": "Enter the title for the section."
+    },
+    {
+      "key": "field_slider_items",
+      "label": "Slider Items",
+      "name": "slider_items",
+      "type": "repeater",
+      "required": true,
+      "instructions": "Add items for the carousel slider.",
+      "layout": "table",
+      "sub_fields": [
+        {
+          "key": "field_image",
+          "label": "Image",
+          "name": "image",
+          "type": "image",
+          "required": true,
+          "instructions": "Upload an image for the slider item."
+        },
+        {
+          "key": "field_savings",
+          "label": "Savings",
+          "name": "savings",
+          "type": "text",
+          "required": true,
+          "instructions": "Enter the savings information for the item."
+        },
+        {
+          "key": "field_item_title",
+          "label": "Item Title",
+          "name": "item_title",
+          "type": "text",
+          "required": true,
+          "instructions": "Enter the title for the item."
+        },
+        {
+          "key": "field_tagline",
+          "label": "Tagline",
+          "name": "tagline",
+          "type": "text",
+          "required": true,
+          "instructions": "Enter the tagline for the item."
+        },
+        {
+          "key": "field_description",
+          "label": "Description",
+          "name": "description",
+          "type": "textarea",
+          "required": true,
+          "instructions": "Enter the description for the item."
+        },
+        {
+          "key": "field_reviews",
+          "label": "Reviews",
+          "name": "reviews",
+          "type": "image",
+          "required": true,
+          "instructions": "Upload an image for the reviews section."
+        },
+        {
+          "key": "field_read_more_button",
+          "label": "Read More Button",
+          "name": "read_more_button",
+          "type": "link",
+          "required": true,
+          "instructions": "Enter the URL and title for the read more button."
+        }
+      ]
+    }
+  ]
+}
