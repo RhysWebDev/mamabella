@@ -1,11 +1,11 @@
 {
-    "key": "group_646cbdf073082",
-    "title": "Products",
+    "key": "group_64cc206fc64c6",
+    "title": "Resource Banner",
     "fields": [
         {
-            "key": "field_646cbdf00eff8",
-            "label": "Badge",
-            "name": "badge",
+            "key": "field_64cc207028480",
+            "label": "Background Image",
+            "name": "background_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -31,9 +31,51 @@
             "library": "all"
         },
         {
-            "key": "field_64ccf8f957ee9",
-            "label": "Price",
-            "name": "price",
+            "key": "field_64cc208628481",
+            "label": "Subtitle",
+            "name": "subtitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64cc209328482",
+            "label": "Title",
+            "name": "title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64cc209a28483",
+            "label": "Button Link",
+            "name": "button_link",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -55,9 +97,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "product"
+                "value": "acf\/resources-banner"
             }
         ]
     ],
@@ -77,5 +119,5 @@
     "acfe_meta": "",
     "acfe_note": "",
     "acfe_form": 0,
-    "modified": 1691154687
+    "modified": 1691099309
 }

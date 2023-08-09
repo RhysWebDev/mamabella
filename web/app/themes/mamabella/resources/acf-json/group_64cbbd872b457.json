@@ -1,13 +1,13 @@
 {
-    "key": "group_64b144d9944b5",
-    "title": "Internal Page Header",
+    "key": "group_64cbbd872b457",
+    "title": "Post Category option",
     "fields": [
         {
-            "key": "field_64b144d992daa",
-            "label": "Background Image",
-            "name": "background_image",
+            "key": "field_64cbbd87860c1",
+            "label": "Post Category",
+            "name": "post_category",
             "aria-label": "",
-            "type": "image",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -17,18 +17,21 @@
                 "id": ""
             },
             "acfe_save_meta": 0,
-            "uploader": "",
-            "return_format": "url",
-            "acfe_thumbnail": 0,
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium",
-            "library": "all"
+            "choices": {
+                "Deals": "Deals",
+                "Reviews": "Reviews",
+                "Posts": "Posts",
+                "How to": "How to"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": ""
         }
     ],
     "location": [
@@ -36,7 +39,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/page-header-internal"
+                "value": "acf\/post-grid-with-filter"
             }
         ]
     ],
@@ -56,5 +59,5 @@
     "acfe_meta": "",
     "acfe_note": "",
     "acfe_form": 0,
-    "modified": 1691068358
+    "modified": 1691075616
 }

@@ -1,0 +1,43 @@
+.tab.active {
+  background: $activeColor;
+  color: $clr-white;
+}
+
+.tab {
+  padding: 2rem;
+  flex-grow: 1;
+  background: $darkBlue;
+  color: $clr-white;
+}
+
+.form-wrapper {
+  position: relative;
+  .acf-label {
+    display: none;
+  }
+
+  .acf-fields > .acf-field {
+    border-top-width: 0px;
+  }
+
+  .acf-field {
+    input {
+      border-radius: 50px;
+      height: 51px;
+      color: $primary-color;
+    }
+
+    textarea {
+      border-radius: 50px;
+      color: $primary-color;
+      height: 370px;
+      min-height: 370px;
+      max-height: 370px;
+    }
+  }
+  .acf-form-submit {
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+  }
+}

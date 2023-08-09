@@ -1,11 +1,32 @@
 {
-    "key": "group_646cbdf073082",
-    "title": "Products",
+    "key": "group_64d36c8f0cebf",
+    "title": "How to (post type)",
     "fields": [
         {
-            "key": "field_646cbdf00eff8",
-            "label": "Badge",
-            "name": "badge",
+            "key": "field_64d36c8fb032b",
+            "label": "Image credit",
+            "name": "image_credit",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_64d36d5258c42",
+            "label": "Author Image",
+            "name": "author_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -29,27 +50,6 @@
             "mime_types": "",
             "preview_size": "medium",
             "library": "all"
-        },
-        {
-            "key": "field_64ccf8f957ee9",
-            "label": "Price",
-            "name": "price",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_save_meta": 0,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
         }
     ],
     "location": [
@@ -57,7 +57,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "product"
+                "value": "how-to"
             }
         ]
     ],
@@ -77,5 +77,5 @@
     "acfe_meta": "",
     "acfe_note": "",
     "acfe_form": 0,
-    "modified": 1691154687
+    "modified": 1691577702
 }

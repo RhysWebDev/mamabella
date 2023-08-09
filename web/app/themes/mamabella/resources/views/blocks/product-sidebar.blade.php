@@ -40,7 +40,7 @@
                         </div>
                         <div class="w-3/5 p-4 flex flex-col justify-center">
                             <h3 class="text-lg font-bold">{{ $product->post_title }}</h3>
-                            <span class="block font-semibold text-gray-700 mt-2">{!! wc_price(get_post_meta($product->ID, '_regular_price', true)) !!}</span>
+                            <span class="block font-semibold text-gray-700 mt-2">{{ get_field('price') }}</span>
                             <p class="text-sm mt-2">{{ $product->post_excerpt }}</p>
                             <!-- Additional product details can be added here -->
                         </div>

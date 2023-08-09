@@ -70,7 +70,8 @@
     <div id="breadcrumb" class="flex flex-row gap-x-[2rem]">
         @foreach ($breadcrumbs as $breadcrumb)
             <div>
-                <a class="text-white" href="{{ $breadcrumb['url'] }}">{{ $breadcrumb['text'] }}</a>
+                <a class=" @if (is_page(451) || is_page(474) || is_singular()) text-primary @else text-white @endif"
+                    href="{{ $breadcrumb['url'] }}">{!! $breadcrumb['text'] !!}</a>
             </div>
         @endforeach
     </div>

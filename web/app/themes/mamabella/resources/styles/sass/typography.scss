@@ -49,3 +49,12 @@
     }
   }
 }
+
+.small-pink-title {
+  font-size: 18px;
+  color: $secondary-color;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-family: $secondary-font;
+}

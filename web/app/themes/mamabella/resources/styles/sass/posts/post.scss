@@ -22,6 +22,11 @@
     border-bottom-right-radius: 80px;
   }
 
+  &__content-wrap-ingredients {
+    border: 2px solid $darkPink;
+    border-bottom-right-radius: 80px;
+  }
+
   &__category {
     background: #f6b4ac;
     color: $primary-color;
@@ -62,5 +67,74 @@
       );
       clip-path: polygon(100% 0%, $inset 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
     }
+  }
+
+  &__category-ingredients {
+    background: $darkPink;
+    color: $clr-white;
+    bottom: 0;
+    font-size: 18px;
+    left: -17px;
+    padding-left: 35px !important;
+    padding: 7px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -17px;
+      left: 0;
+      padding: 2px 8px;
+      width: 17px;
+      height: 17px;
+      display: block;
+      background-image: url('https://mamabella.dashdev.uk/app/uploads/2023/08/corner.png');
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: -40px;
+      top: 0px;
+      width: 43px;
+      height: 43px;
+      display: block;
+      background: $darkPink;
+      -webkit-clip-path: polygon(
+        100% 0%,
+        $inset 50%,
+        100% 100%,
+        0 100%,
+        0% 50%,
+        0 0
+      );
+      clip-path: polygon(100% 0%, $inset 50%, 100% 100%, 0 100%, 0% 50%, 0 0);
+    }
+  }
+}
+
+.post-grid-with-filter {
+  &__img img {
+    min-height: 255px;
+    max-height: 255px;
+  }
+
+  &__filter-box {
+    background-color: $accent-pink;
+    background-image: url('http://mamabella.test/app/uploads/2023/08/three.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .facetwp-facet {
+    margin-bottom: 15px !important;
+  }
+
+  select.facetwp-dropdown {
+    padding: 0.2rem 1rem;
+  }
+
+  .fwp-submit,
+  select.facetwp-dropdown {
+    height: 40px;
   }
 }

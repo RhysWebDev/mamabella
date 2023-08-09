@@ -56,3 +56,34 @@ $(document).ready(function () {
     ],
   });
 });
+
+// tabs
+
+document.querySelectorAll('.tab').forEach((tab) => {
+  tab.addEventListener('click', function () {
+    // Remove active class from all tabs
+    document.querySelectorAll('.tab').forEach((innerTab) => {
+      innerTab.classList.remove('active');
+      innerTab.classList.remove('bg-primary');
+      innerTab.classList.add('text-primary');
+      innerTab.classList.add('bg-gray-200');
+    });
+
+    // Add active class to clicked tab
+    tab.classList.add('active');
+    tab.classList.add('bg-primary');
+    tab.classList.remove('text-primary');
+    tab.classList.remove('bg-gray-200');
+
+    // Hide all tab content
+    document.querySelectorAll('.tab-content').forEach((content) => {
+      content.classList.add('hidden');
+    });
+
+    // Show content for clicked tab
+    const content = document.querySelector(
+      `[data-content="${tab.getAttribute('data-tab')}"]`
+    );
+    content.classList.remove('hidden');
+  });
+});
