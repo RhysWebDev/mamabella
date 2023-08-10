@@ -63,3 +63,20 @@ collect(['setup', 'filters'])
             );
         }
     });
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Register New block file
+|--------------------------------------------------------------------------
+|
+| Register new file for blocks
+|
+*/
+
+
+    add_filter('sage-acf-gutenberg-blocks-templates', function ($folders) { 
+        $folders[] = 'views/blocks/component-blocks'; // Adds your folder
+        return $folders;
+    });

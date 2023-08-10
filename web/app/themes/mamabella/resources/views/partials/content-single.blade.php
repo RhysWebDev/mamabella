@@ -1,15 +1,17 @@
 <article
     @php(post_class('h-entry, bg-[#F6F9FB]'))>
 
-    <div class="article__wrap max-w-[1520px] boxed mx-auto bg-white">
-      <div class="article__header max-w-[1118px] mx-auto">
+    <div class="article__wrap max-w-[1520px] boxed mx-auto bg-white ">
+      <div class="article__header max-w-[1118px] mx-auto pt-[3rem]">
         @include('partials.breadcrumbs')
-        <h1 class="text-[50px] font-primary text-primary"> {{ the_title() }} </h1>
-        <div class="article__info flex-row flex">
-          <img src="{{ get_field('author_image') }}">
-          <div class="flex flex-row">
-            {{ get_the_modified_date() }}
-            {{ get_the_author_meta('display_name') }}
+        <h1 class="text-[50px] font-primary text-primary mb-[2rem]"> {{ the_title() }} </h1>
+        <div class="article__info flex-col md:flex-row flex mb-[2rem]">
+          <img class="mr-[1.5rem]" src="{{ get_field('author_image') }}">
+          <div class="flex flex-row gap-x-[2rem] items-center">
+            <div class="text-secondary font-secondary">{{ get_the_author_meta('display_name') }} </div>
+            <div> | </div>
+            <div class="text-primary font-secondary">Updated: {{ get_the_modified_date() }} </div>
+            
           </div>
         </div>
 
@@ -18,14 +20,15 @@
       </div>
 
       <div class="mx-auto max-w-[1118px]">
-      <div class="article__wrapper  flex flex-row">
-          <div class="e-content flex flex-col pt-[3rem]">
+      <div class="article__wrapper  flex flex-col md:flex-row w-full">
+          <div class="e-content flex flex-col pt-[3rem] pr-[1rem]">
             {!! the_content() !!}
           </div>
 
       
 
-      <div class="post-specific-sidebar article__sidebar flex flex-col md:min-w-[336px]">
+<div class="checklist-box ">
+      <div class="post-specific-sidebar md:pl-[1rem] article__sidebar flex flex-col md:min-w-[336px] pt-[3rem]">
           @if (is_singular('how-to'))
               @include('sections.sidebarHowto')
           @elseif (is_singular('product'))

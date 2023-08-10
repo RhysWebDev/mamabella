@@ -87,3 +87,26 @@ document.querySelectorAll('.tab').forEach((tab) => {
     content.classList.remove('hidden');
   });
 });
+
+// slider
+document.addEventListener('DOMContentLoaded', function () {
+  const sliderItemsContainer = document.querySelector('.slider-items');
+  const sliderItem = document.querySelector('.slider-item'); // We just need one item to get its width
+  const itemWidthWithGap =
+    sliderItem.offsetWidth +
+    parseInt(window.getComputedStyle(sliderItem).marginRight);
+
+  function slide(direction) {
+    // Adjust the scroll position
+    sliderItemsContainer.scrollLeft += direction * itemWidthWithGap;
+  }
+
+  // Attach event listeners to the arrows
+  document.querySelector('.slide-left').addEventListener('click', function () {
+    slide(-1);
+  });
+
+  document.querySelector('.slide-right').addEventListener('click', function () {
+    slide(1);
+  });
+});

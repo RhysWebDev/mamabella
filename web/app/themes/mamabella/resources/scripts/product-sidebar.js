@@ -25,12 +25,14 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollInterval = requestAnimationFrame(scrollContainer);
   }
 
-  scrollButton.addEventListener('mousedown', function () {
-    if (!isScrolling) {
-      isScrolling = true;
-      scrollContainer();
-    }
-  });
+  if (scrollButton) {
+    scrollButton.addEventListener('mousedown', function () {
+      if (!isScrolling) {
+        isScrolling = true;
+        scrollContainer();
+      }
+    });
+  }
 
   document.addEventListener('mouseup', function () {
     if (isScrolling) {

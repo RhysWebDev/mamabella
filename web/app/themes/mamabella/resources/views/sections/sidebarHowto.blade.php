@@ -3,20 +3,20 @@
         <div class="checklist__header bg-primary text-center py-[2rem] rounded-t-[10px]">
             <h2 class="text-[30px] font-primary text-white font-bold">Tips & Tricks</h2>
         </div>
-        <div class="checklist__items">
-            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center">
+        <div class="checklist__items bg-[#F6F9FB]">
+            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem]">
                 @include('partials.svgcheck')
                 <p class="font-secondary text-primary">Trim to Size</p>
             </div>
-            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center">
+            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem] bg-white">
                 @include('partials.svgcheck')
                 <p class="font-secondary text-primary">Apply glue and wait 30 secs</p>
             </div>
-            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center">
+            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem]">
                 @include('partials.svgcheck')
                 <p class="font-secondary text-primary">Use tweezers</p>
             </div>
-            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center">
+            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem]  bg-white">
                 @include('partials.svgcheck')
                 <p class="font-secondary text-primary">Keep eyes open</p>
             </div>
@@ -33,9 +33,8 @@
 
     @php
         $products = get_posts([
-            'post_type' => 'product',
+            'post_type' => 'how-to',
             'posts_per_page' => -1,
-            'product_cat' => 'spotlight',
             'order' => 'ASC',
         ]);
     @endphp

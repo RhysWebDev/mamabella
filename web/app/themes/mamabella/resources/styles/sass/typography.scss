@@ -58,3 +58,35 @@
   letter-spacing: 2px;
   font-family: $secondary-font;
 }
+
+.decorated-title {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 2rem;
+  width: 100%;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 115px;
+    background-image: url('https://mamabella.dashdev.uk/app/uploads/2023/08/Path-1426.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 16px;
+    z-index: -1;
+
+    @media (max-width: 740px) {
+      background-size: contain;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
