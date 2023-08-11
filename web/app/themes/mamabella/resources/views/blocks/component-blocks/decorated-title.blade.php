@@ -16,7 +16,9 @@
 --}}
 
 <div class="decorated-title-wrap relative">
+
     <div class="decorated-title__wrapper-main">
+
         @if (have_rows('decorated_title_layout'))
             @while (have_rows('decorated_title_layout'))
                 @php(the_row())
@@ -105,75 +107,10 @@
                         </div>
                     @endif
                 @endif
-
-                {{-- @if (get_row_layout() == 'title_with_products_listing')
-                    <div class="decorated-title title-wrapper w-full mx-auto">
-                        <h2
-                            class="bg-secondary text-center text-white font-primary text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
-                            {!! get_sub_field('title') !!}
-                        </h2>
-                    </div>
-
-                    @if (have_rows('products'))
-                        @while (have_rows('products'))
-                            @php
-                                the_row();
-                                
-                                $link1 = get_sub_field('product_link_1');
-                                $link2 = get_sub_field('product_link_2');
-                                
-                                $price1 = get_sub_field('product_price_1');
-                                $price2 = get_sub_field('product_price_2');
-                            @endphp
-                            <div class="products-item flex flex-row">
-                                <div class="product_image_left">
-                                    <img src="{{ get_sub_field('product_image') }}">
-                                </div>
-                                <div class="product_info_right flex flex-col">
-                                    <h3 class="font-secondary text-primary text-[20px]">
-                                        {{ get_sub_field('product_title') }}
-                                    </h3>
-
-                                    @if (is_array($link1))
-                                        <div class="products-item flex flex-row px-[2rem] justify-between py-[1rem]">
-                                            <div class="products-item__wrap">
-                                                <a href="{{ $link1['url'] ?? '#' }}">
-                                                    <i
-                                                        class="pr-[1rem] fas fa-shopping-cart"></i>{{ $link1['title'] ?? 'Product' }}
-                                                </a>
-                                            </div>
-                                            <div class="products-item__wrap">
-                                                <a href="{{ $link1['url'] ?? '#' }}">
-                                                    {{ $price1 }}
-                                                </a>
-                                            </div>
-                                        </div>
-                                    @endif
-
-                                    @if (is_array($link2))
-                                        <div class="products-item flex flex-row px-[2rem] justify-between py-[1rem]">
-                                            <div class="products-item__wrap">
-                                                <a href="{{ $link2['url'] ?? '#' }}">
-                                                    <i
-                                                        class="pr-[1rem] fas fa-shopping-cart"></i>{{ $link2['title'] ?? 'Product' }}
-                                                </a>
-                                            </div>
-                                            <div class="products-item__wrap">
-                                                <a href="{{ $link2['url'] ?? '#' }}">
-                                                    {{ $price2 }}
-                                                </a>
-                                            </div>
-                                        </div>
-                                    @endif
-
-                                </div>
-                            </div>
-                        @endwhile
-                    @endif
-                @endif --}}
-
-
             @endwhile
+        @else
+            {{-- No layouts found --}}
         @endif
+
     </div>
 </div>
