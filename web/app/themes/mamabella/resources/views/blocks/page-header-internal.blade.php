@@ -24,9 +24,9 @@
             @include('partials.breadcrumbs')
             <h1 class="text-white font-primary font-medium text-[50px]"> {{ get_the_title() }} </h1>
         </div>
-        <div class="flex flex-row">
+        {{-- <div class="flex flex-row">
             Filter
             Sort
-        </div>
+        </div> --}}
     </div>
 </section>
