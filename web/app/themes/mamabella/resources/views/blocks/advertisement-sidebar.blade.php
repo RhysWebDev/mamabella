@@ -10,9 +10,6 @@
   SupportsAlign: left right
   SupportsMode: true
   SupportsMultiple: false
-  EnqueueStyle: styles/style.scss
-  EnqueueScript: scripts/script.js
-  EnqueueAssets: path/to/asset
 --}}
 
 <section class=" mt-8 rounded-t-xl flex flex-col gap-y-[2rem] rounded-b-xl ">

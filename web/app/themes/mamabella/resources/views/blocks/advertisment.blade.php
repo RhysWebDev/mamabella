@@ -10,9 +10,6 @@
   SupportsAlign: left right
   SupportsMode: true
   SupportsMultiple: true
-  EnqueueStyle: styles/style.scss
-  EnqueueScript: scripts/script.js
-  EnqueueAssets: path/to/asset
 --}}
 
 

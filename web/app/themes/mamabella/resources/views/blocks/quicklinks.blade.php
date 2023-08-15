@@ -10,9 +10,6 @@
   SupportsAlign: left right
   SupportsMode: true
   SupportsMultiple: false
-  EnqueueStyle: styles/style.scss
-  EnqueueScript: scripts/script.js
-  EnqueueAssets: path/to/asset
 --}}
 
 <section class="container mx-auto mt-[5rem] max-w-[1280px]">
