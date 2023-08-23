@@ -2,11 +2,11 @@
     @php(post_class('h-entry, bg-[#F6F9FB]'))>
 
     <div class="article__wrap max-w-[1520px] boxed mx-auto bg-white ">
-      <div class="article__header max-w-[1118px] mx-auto pt-[3rem]">
+      <div class="article__header max-w-[1118px] mx-auto pt-[3rem] px-[2rem]">
         @include('partials.breadcrumbs')
         <h1 class="text-[50px] font-primary text-primary mb-[2rem]"> {{ the_title() }} </h1>
-        <div class="article__info flex-col md:flex-row flex mb-[2rem]">
-          <img class="mr-[1.5rem]" src="{{ get_field('author_image') }}">
+        <div class="article__info flex-row flex mb-[2rem]">
+          <img class="mr-[1.5rem] max-w-[150px]" src="{{ get_field('author_image') }}">
           <div class="flex flex-row gap-x-[2rem] items-center">
             <div class="text-secondary font-secondary">{{ get_the_author_meta('display_name') }} </div>
             <div> | </div>

@@ -23,7 +23,7 @@
                 @if (get_row_layout() == 'title_with_simple_text_layout')
                     <div class="decorated-title title-wrapper w-full mx-auto">
                         <h2
-                            class="bg-secondary text-center text-white font-primary text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
+                            class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
                             {!! get_sub_field('title') !!}</h2>
                     </div>
 
@@ -35,11 +35,11 @@
                 @if (get_row_layout() == 'title_with_video_or_image_and_text')
                     <div class="decorated-title title-wrapper w-full mx-auto">
                         <h2
-                            class="bg-secondary text-center text-white font-primary text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
+                            class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
                             {!! get_sub_field('title') !!}</h2>
                     </div>
 
-                    <div class="grid grid-cols-2 content-wrapper px-[2rem] pb-[2rem]">
+                    <div class="grid grid-cols-1 md:grid-cols-2 content-wrapper px-[2rem] pb-[2rem]">
 
                         @if (get_sub_field('show_video_or_image'))
                             <div class="video_source-wrapper">
@@ -62,7 +62,7 @@
                 @if (get_row_layout() == 'title_with_featured_image')
                     <div class="decorated-title title-wrapper w-full mx-auto">
                         <h2
-                            class="bg-secondary text-center text-white font-primary text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
+                            class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
                             {!! get_sub_field('title') !!}</h2>
                     </div>
 
@@ -104,9 +104,88 @@
                         </div>
                     @endif
                 @endif
+
+                @if (get_row_layout() == 'title_with_products_listing')
+                    <div class="decorated-title title-wrapper w-full mx-auto">
+                        <h2
+                            class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
+                            {!! get_sub_field('title') !!}</h2>
+                    </div>
+
+                    <div class="decorated-title__products pt-[3rem] px-[2rem]">
+                        @if (have_rows('products'))
+                            @while (have_rows('products'))
+                                @php(the_row())
+                                <div class="decorated-title__product-wrapper py-[2rem]">
+                                    <div class="grid grid-cols-12">
+                                        <div class="col col-span-4 flex-col">
+                                            <img src="{{ get_sub_field('product_image') }}">
+                                        </div>
+                                        <div class="col col-span-8 flex-col ">
+                                            <h3
+                                                class="text-[20px] font-secondary text-[primary] font-bold text-primary pb-[2rem] uppercase">
+                                                {{ get_sub_field('product_title') }}
+                                            </h3>
+                                            @if (have_rows('product_info'))
+                                                @while (have_rows('product_info'))
+                                                    @php(the_row())
+                                                    <div class="grid grid-cols-12">
+                                                        <div class="col col-span-4 flex-col">
+                                                            <i class="fas fa-shopping-cart"></i>
+                                                            <a class="underline text-secondary font-secondary text-[17px]"
+                                                                href="{{ get_sub_field('link_url') }}">
+                                                                {{ get_sub_field('link_text') }}
+                                                            </a>
+                                                        </div>
+                                                        <div class="col col-span-8 flex flex-end justify-end">
+                                                            <p class="font-secondary text-[20px] text-primary">
+                                                                {!! get_sub_field('price') !!}</p>
+                                                        </div>
+                                                    </div>
+                                                @endwhile
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            @endwhile
+                        @endif
+                    </div>
+                @endif
+
+                @if (get_row_layout() == 'title_text_with_article_footer')
+                    <div class="decorated-title title-wrapper w-full mx-auto">
+                        <h2
+                            class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
+                            {!! get_sub_field('title') !!}</h2>
+                    </div>
+
+                    <div class="decorated-title__content content-wrapper px-[2rem] pb-[2rem]">
+                        {!! get_sub_field('content') !!}
+                    </div>
+
+                    @if (get_sub_field('show_author_box'))
+                        <div
+                            class="decorated-title__article-footer grid grid-cols-12 p-[1rem] items-center border-[8px] border-secondary">
+                            <div class="col-3 col-span-3">
+                                <img class="w-full" src="{{ get_sub_field('author_image') }}">
+                            </div>
+                            <div class="col-9 col-span-9">
+                                <h3 class="text-secondary font-secondary text-[20px] mb-[0.5rem]">
+                                    {{ get_sub_field('author_name') }}
+                                </h3>
+                                <div class="text-[14px] font-secondary text-primary pr-[2rem]">{!! get_sub_field('author_text') !!}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="decorated-title__notice font-bold pt-[3rem]">
+                            This site contains affiliate links to recommended products. We may receive a commission for
+                            purchases made through these links. We will not recommend anything we don't believe in and
+                            we are not paid by brands to include specific products unless explicitly stated.
+                        </div>
+                    @endif
+                @endif
             @endwhile
-        @else
-            {{-- No layouts found --}}
         @endif
 
     </div>

@@ -579,11 +579,11 @@
                                     "parent_repeater": "field_64d4fc7402e56"
                                 },
                                 {
-                                    "key": "field_64d4fc7402e59",
-                                    "label": "Product Link 1",
-                                    "name": "product_link_1",
+                                    "key": "field_64e495291110c",
+                                    "label": "Product Info",
+                                    "name": "product_info",
                                     "aria-label": "",
-                                    "type": "link",
+                                    "type": "repeater",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -593,69 +593,82 @@
                                         "id": ""
                                     },
                                     "acfe_save_meta": 0,
-                                    "return_format": "array",
-                                    "parent_repeater": "field_64d4fc7402e56"
-                                },
-                                {
-                                    "key": "field_64d4fc7402e5a",
-                                    "label": "Product Link 2",
-                                    "name": "product_link_2",
-                                    "aria-label": "",
-                                    "type": "link",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "acfe_save_meta": 0,
-                                    "return_format": "array",
-                                    "parent_repeater": "field_64d4fc7402e56"
-                                },
-                                {
-                                    "key": "field_64d4fc7402e5b",
-                                    "label": "Product Price 1",
-                                    "name": "product_price_1",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "acfe_save_meta": 0,
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "parent_repeater": "field_64d4fc7402e56"
-                                },
-                                {
-                                    "key": "field_64d4fc7402e5c",
-                                    "label": "Product Price 2",
-                                    "name": "product_price_2",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "acfe_save_meta": 0,
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
+                                    "acfe_repeater_stylised_button": 0,
+                                    "layout": "table",
+                                    "pagination": 0,
+                                    "min": 0,
+                                    "max": 0,
+                                    "collapsed": "",
+                                    "button_label": "Add Row",
+                                    "rows_per_page": 20,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_64e495311110d",
+                                            "label": "Price",
+                                            "name": "price",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_save_meta": 0,
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "parent_repeater": "field_64e495291110c"
+                                        },
+                                        {
+                                            "key": "field_64e495371110e",
+                                            "label": "Link url",
+                                            "name": "link_url",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_save_meta": 0,
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "parent_repeater": "field_64e495291110c"
+                                        },
+                                        {
+                                            "key": "field_64e4953e1110f",
+                                            "label": "Link text",
+                                            "name": "link_text",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_save_meta": 0,
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "parent_repeater": "field_64e495291110c"
+                                        }
+                                    ],
                                     "parent_repeater": "field_64d4fc7402e56"
                                 }
                             ]
@@ -674,7 +687,7 @@
                 },
                 "layout_64d4c70078dc6": {
                     "key": "layout_64d4c70078dc6",
-                    "name": "title_with_products",
+                    "name": "title_text_with_article_footer",
                     "label": "Title with Content and Article Footer",
                     "display": "block",
                     "sub_fields": [
@@ -740,6 +753,84 @@
                             "ui": 0,
                             "ui_on_text": "",
                             "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_64e5d3c18d322",
+                            "label": "Author Image",
+                            "name": "author_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_64d4c71e78dd0",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_save_meta": 0,
+                            "uploader": "",
+                            "return_format": "url",
+                            "acfe_thumbnail": 0,
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "preview_size": "medium",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_64e5d42b09bab",
+                            "label": "Author name",
+                            "name": "author_name",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_save_meta": 0,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_64e5d3d18d323",
+                            "label": "Author Text",
+                            "name": "author_text",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "acfe_save_meta": 0,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
                         }
                     ],
                     "min": "",
@@ -787,5 +878,5 @@
     "acfe_meta": "",
     "acfe_note": "",
     "acfe_form": 0,
-    "modified": 1691679895
+    "modified": 1692783666
 }

@@ -45,7 +45,7 @@
 
             <div class="product_sidebar--inner grid grid-cols-1 gap-4 items-center justify-center">
                 @foreach ($products as $product)
-                    <div class="bg-white shadow rounded-xl ">
+                    <div class="bg-white shadow-lg rounded-md ">
                         <div class="flex flex-row">
                             <div class="w-2/5 flex items-center ">
                                 <div class="product__image">
@@ -53,7 +53,8 @@
                                 </div>
                             </div>
                             <div class="w-3/5 p-4 flex flex-col justify-center">
-                                <h3 class="text-lg font-bold">{{ $product->post_title }}</h3>
+                                <h3 class="font-bold text-[14px] font-secondary uppercase text-primary">
+                                    {{ $product->post_title }}</h3>
                                 <span class="block font-semibold text-gray-700 mt-2">{{ get_field('price') }}</span>
                                 <p class="text-sm mt-2">{{ $product->post_excerpt }}</p>
                                 <!-- Additional product details can be added here -->
