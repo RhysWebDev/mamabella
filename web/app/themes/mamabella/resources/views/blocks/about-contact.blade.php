@@ -42,8 +42,7 @@
                 <h2 class="text-[40px] font-bold font-primary text-primary text-center mb-[2rem]">
                     {{ get_field('column_title') }}
                 </h2>
-                <img class="absolute left w-full bar-spacer pt-[2rem] mt-[8rem]"
-                    src="https://mamabella.dashdev.uk/app/uploads/2023/08/Group-2003.png">
+
                 <div class="team_wrapper pt-[1.5rem] mt-[4rem] md:mt-[2rem]">
                     @if (have_rows('team_members'))
                         @while (have_rows('team_members'))
