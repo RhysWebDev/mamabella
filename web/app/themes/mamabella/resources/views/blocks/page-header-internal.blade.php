@@ -14,7 +14,7 @@
 
 
 <section data-{{ $block['id'] }}
-    class="flex relative z-[10] items-center bg-primary hero bg-cover bg-center container boxed mx-auto max-w-[1520px] mx-auto"
+    class="flex relative z-[10] items-center bg-primary hero bg-cover bg-center container boxed mx-auto max-w-[1520px] px-[1.5rem] lg:px-[0px] mx-auto"
     style="background-image: url('{{ get_field('background_image') }}');">
     <div class="max-w-[1180px] mx-auto gap-5 w-full py-[4rem] flex flex-row">
         <div class="flex flex-col">

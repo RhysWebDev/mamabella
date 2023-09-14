@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
-
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
@@ -10,6 +8,7 @@
 @import './sass/navigation.scss';
 @import './sass/main.scss';
 @import './sass/header.scss';
+@import './sass/footer.scss';
 @import './sass/inputs.scss';
 @import './sass/blocks/featured-article.scss';
 @import './sass/posts/post.scss';
@@ -30,3 +29,5 @@
 @import './sass/components/buttons.scss';
 
 @import 'slick-carousel/slick/slick.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');

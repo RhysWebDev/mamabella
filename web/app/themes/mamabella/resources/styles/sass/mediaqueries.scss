@@ -1,3 +1,7 @@
+.show-mobile {
+  display: none;
+}
+
 .tablet-hide {
   @media (max-width: 1024px) {
     display: none !important;
@@ -13,5 +17,25 @@
 .show-mobile {
   @media (max-width: 1024px) {
     display: block !important;
+  }
+}
+
+.mobile-cols {
+  @media (min-width: 769px) and (max-width: 1160px) {
+    display: flex;
+    flex-direction: column !important;
+  }
+}
+
+section {
+  @media (max-width: 1580px) and (min-width: 1360px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid-mobile {
+    grid-auto-flow: dense;
   }
 }

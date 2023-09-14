@@ -1,15 +1,3 @@
-// .swiper-container {
-//   overflow: hidden;
-// }
-
-.swiper-wrapper {
-  width: 100vw !important;
-}
-
-.primary-title {
-  font-family: $primary-font;
-}
-
 .bg-gradient {
   background: $gradientbg;
 }
@@ -43,45 +31,9 @@
   }
 }
 
-.mobile-cols {
-  @media (min-width: 769px) and (max-width: 1160px) {
-    display: flex;
-    flex-direction: column !important;
-  }
-}
-
 .bar-spacer {
   left: -50%;
   transform: translate(50%);
-}
-
-section {
-  @media (max-width: 1580px) and (min-width: 1360px) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-.footer {
-  position: relative;
-  &:before {
-    content: '';
-    width: 251px;
-    height: 251px;
-    display: block;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    top: -121px;
-    background-image: url('http://mamabella.test/app/uploads/2023/07/Mask-Group-16-3.png');
-    background-size: cover;
-  }
-}
-
-@media (max-width: 1024px) {
-  .grid-mobile {
-    grid-auto-flow: dense;
-  }
 }
 
 .scrollToBottom {
@@ -98,40 +50,10 @@ section {
   z-index: -1;
 }
 
-.e-content {
-  width: 100%;
-
-  p {
-    font-family: $secondary-font;
-    font-size: 20px;
-    font-weight: normal;
-    color: $primary-color;
-  }
-
-  @media (max-width: 740px) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  p {
-    padding-bottom: 1.5rem;
-  }
-}
-
 .wp-post-image {
   width: 100%;
 }
 
-.show-mobile {
-  display: none;
-}
-
-@media (max-width: 640px) {
-  .hide-mobile {
-    display: none;
-  }
-
-  .show-mobile {
-    display: block;
-  }
+.fwp-submit {
+  margin-bottom: 40px;
 }

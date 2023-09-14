@@ -2,7 +2,7 @@
     "key": "post_type_64d35e9d58393",
     "title": "Favourites",
     "menu_order": 0,
-    "active": true,
+    "active": false,
     "post_type": "favourite",
     "advanced_configuration": false,
     "import_source": "",
@@ -83,5 +83,5 @@
     "can_export": true,
     "delete_with_user": false,
     "register_meta_box_cb": "",
-    "modified": 1694700361
+    "modified": 1694704339
 }

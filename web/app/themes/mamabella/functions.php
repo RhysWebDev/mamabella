@@ -80,3 +80,8 @@ collect(['setup', 'filters'])
         $folders[] = 'views/blocks/component-blocks'; // Adds your folder
         return $folders;
     });
+
+
+    add_filter( 'facetwp_is_main_query', function( $bool, $query ) {
+        return ( true === $query->get( 'facetwp' ) ) ? true : $bool;
+    }, 10, 2 );

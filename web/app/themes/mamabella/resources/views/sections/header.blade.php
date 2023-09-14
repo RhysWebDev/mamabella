@@ -33,7 +33,7 @@
         <div class="flex justify-center show-mobile">
             <img class="max-w-[190px]" src="{{ get_field('site_logo', 'options') }}">
         </div>
-        <div class="nav_wrap py-[1rem] md:py-[2rem]">
+        <div class="nav_wrap py-[1rem] md:py-[2rem] lg:w-full">
             @include('partials.navigation')
         </div>
     </div>

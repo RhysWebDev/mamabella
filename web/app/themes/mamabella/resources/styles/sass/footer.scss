@@ -1,0 +1,16 @@
+.footer {
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 251px;
+    height: 251px;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    top: -121px;
+    background-image: url('http://mamabella.test/app/uploads/2023/07/Mask-Group-16-3.png');
+    background-size: cover;
+  }
+}
