@@ -98,12 +98,6 @@ section {
   z-index: -1;
 }
 
-// .nav_wrap {
-//   position: relative;
-//   z-index: 2;
-//   box-shadow: -2px 4px 10px 0px rgba(0, 0, 0, 0.16) !important;
-// }
-
 .e-content {
   width: 100%;
 
@@ -126,4 +120,18 @@ section {
 
 .wp-post-image {
   width: 100%;
+}
+
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .hide-mobile {
+    display: none;
+  }
+
+  .show-mobile {
+    display: block;
+  }
 }

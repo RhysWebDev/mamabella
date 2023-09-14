@@ -67,7 +67,10 @@
         "page-attributes",
         "thumbnail"
     ],
-    "taxonomies": "",
+    "taxonomies": [
+        "category",
+        "post_tag"
+    ],
     "has_archive": false,
     "has_archive_slug": "",
     "rewrite": {
@@ -81,5 +84,5 @@
     "can_export": true,
     "delete_with_user": false,
     "register_meta_box_cb": "",
-    "modified": 1694594881
+    "modified": 1694700357
 }

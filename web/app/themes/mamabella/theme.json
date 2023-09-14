@@ -1266,6 +1266,11 @@
           "name": "Faded",
           "slug": "faded",
           "color": "#ebecf0"
+        },
+        {
+          "name": "Menu",
+          "slug": "menu",
+          "color": "#818b99"
         }
       ]
     },
@@ -1315,6 +1320,11 @@
           "name": "Semplicitapro",
           "slug": "secondary",
           "fontFamily": "semplicitapro,sans-serif"
+        },
+        {
+          "name": "Monsterrat",
+          "slug": "monsterrat",
+          "fontFamily": "Monsterrat,sans-serif"
         }
       ],
       "fontSizes": [

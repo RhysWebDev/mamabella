@@ -110,3 +110,20 @@ document.addEventListener('DOMContentLoaded', function () {
     slide(1);
   });
 });
+
+//  Menu
+
+document.addEventListener('DOMContentLoaded', function () {
+  const navPrimary = document.querySelector('.nav-primary');
+  const navMobile = document.querySelector('.mobile-nav');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navClose = document.querySelector('.nav-toggle-close');
+
+  navToggle.addEventListener('click', function () {
+    navMobile.classList.toggle('nav-open');
+  });
+
+  navClose.addEventListener('click', function () {
+    navMobile.classList.toggle('nav-open');
+  });
+});

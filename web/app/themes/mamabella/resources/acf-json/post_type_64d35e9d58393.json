@@ -67,7 +67,8 @@
         "thumbnail"
     ],
     "taxonomies": [
-        "category"
+        "category",
+        "post_tag"
     ],
     "has_archive": false,
     "has_archive_slug": "",
@@ -82,5 +83,5 @@
     "can_export": true,
     "delete_with_user": false,
     "register_meta_box_cb": "",
-    "modified": 1691573929
+    "modified": 1694700361
 }

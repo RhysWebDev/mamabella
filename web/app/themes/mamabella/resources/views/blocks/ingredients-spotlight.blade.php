@@ -13,7 +13,7 @@
 --}}
 
 
-<section data-{{ $block['id'] }} class=" container boxed mx-auto max-w-[1520px] mx-auto bg-white">
+<section data-{{ $block['id'] }} class="container boxed mx-auto max-w-[1520px] mx-auto bg-white">
 
     <div data-{{ $block['id'] }}
         class="flex items-center hero bg-cover bg-center container boxed mx-auto max-w-[1520px] mx-auto">

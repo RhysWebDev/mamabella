@@ -1570,16 +1570,16 @@
         },
         {
             "name": "log1x/navi",
-            "version": "v2.0.3",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Log1x/navi.git",
-                "reference": "74de35686654217865e19be750baf11bf1d41f68"
+                "reference": "50bb70e8b689d604c30c749166926b06a438e661"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Log1x/navi/zipball/74de35686654217865e19be750baf11bf1d41f68",
-                "reference": "74de35686654217865e19be750baf11bf1d41f68",
+                "url": "https://api.github.com/repos/Log1x/navi/zipball/50bb70e8b689d604c30c749166926b06a438e661",
+                "reference": "50bb70e8b689d604c30c749166926b06a438e661",
                 "shasum": ""
             },
             "require": {
@@ -1622,7 +1622,7 @@
             ],
             "support": {
                 "issues": "https://github.com/log1x/navi/issues",
-                "source": "https://github.com/Log1x/navi/tree/v2.0.3"
+                "source": "https://github.com/Log1x/navi/tree/v2.0.4"
             },
             "funding": [
                 {
@@ -1630,7 +1630,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-09-16T21:43:14+00:00"
+            "time": "2023-07-29T06:46:25+00:00"
         },
         {
             "name": "monolog/monolog",

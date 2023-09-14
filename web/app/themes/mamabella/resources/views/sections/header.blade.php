@@ -1,9 +1,9 @@
-<header class="header header_shadow">
+<header class="header header_shadow relative">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://use.typekit.net/egk2ikd.css">
 
 
-    <div class="container mx-auto">
+    <div class="container mx-auto hide-mobile">
         <div class="flex justify-between items-center text-white py-4 px-8">
             <div class="w-1/4 hidden sm:block">
                 <?php get_search_form(); ?>
@@ -29,8 +29,11 @@
         </div>
     </div>
     <hr />
-    <div class="container mx-auto">
-        <div class="nav_wrap py-[2rem]">
+    <div class="container mx-auto flex flex-row justify-between items-center">
+        <div class="flex justify-center show-mobile">
+            <img class="max-w-[190px]" src="{{ get_field('site_logo', 'options') }}">
+        </div>
+        <div class="nav_wrap py-[1rem] md:py-[2rem]">
             @include('partials.navigation')
         </div>
     </div>

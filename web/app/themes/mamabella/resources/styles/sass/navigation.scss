@@ -1,0 +1,111 @@
+.nav-primary {
+  // Styles for the desktop view
+
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+
+  .nav-link {
+    // Styles for the main menu items
+    font-weight: bold;
+    font-family: theme('fontFamily.monsterrat');
+
+    &:hover {
+      // Styles for the main menu items on hover
+    }
+
+    &.parent {
+      // Styles for main menu items with submenus
+      position: relative;
+
+      @media (max-width: 1024px) {
+        .submenu {
+          display: block;
+        }
+      }
+      &:hover {
+        .submenu {
+          display: block;
+        }
+      }
+    }
+
+    &.current-item {
+      // Styles for the current active menu item
+    }
+
+    .submenu {
+      // Styles for the submenu container
+      display: none;
+      position: absolute;
+      top: 24;
+      left: 0;
+      min-width: max-content;
+      background-color: theme('colors.menu');
+      z-index: 10;
+
+      @media (max-width: 1024px) {
+        position: static;
+        background-color: transparent;
+        text-align: center;
+      }
+
+      .nav-link {
+        // Styles for the submenu items
+      }
+    }
+  }
+}
+
+.desktop-nav {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.nav-toggle {
+  display: none;
+  @media (max-width: 1024px) {
+    display: block;
+    font-size: 36px;
+  }
+}
+
+.mobile-nav {
+  display: none;
+  z-index: 11111;
+}
+
+.nav-open {
+  display: block;
+}
+
+.nav-toggle-close {
+  position: absolute;
+  font-size: 36px;
+  top: 40px;
+  right: 40px;
+  z-index: 1111;
+}
+
+.nav-overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: theme('colors.menu');
+  left: 0px;
+  top: 0px;
+
+  .nav-overlay-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+    height: 100%;
+
+    .nav-link {
+      font-size: 20px;
+      color: white;
+    }
+  }
+}

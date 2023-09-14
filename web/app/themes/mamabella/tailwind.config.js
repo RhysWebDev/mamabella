@@ -8,6 +8,7 @@ const config = {
         secondary: '#f6b4ac',
         accent: '#79839C',
         faded: '#EBECF0',
+        menu: '#818B99',
       }, // Extend Tailwind's default colors
       fontSize: {
         '3xl': '3.125rem',
@@ -15,6 +16,7 @@ const config = {
       fontFamily: {
         primary: ['gelica', 'sans-serif'],
         secondary: ['semplicitapro', 'sans-serif'],
+        monsterrat: ['Monsterrat', 'sans-serif'],
       },
     },
   },
