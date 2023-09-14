@@ -1,0 +1,17 @@
+.tablet-hide {
+  @media (max-width: 1024px) {
+    display: none !important;
+  }
+}
+
+.hide-mobile {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.show-mobile {
+  @media (max-width: 1024px) {
+    display: block !important;
+  }
+}

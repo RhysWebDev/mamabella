@@ -12,6 +12,11 @@
   &__icon-text {
     font-size: 0.8rem;
   }
+
+  @media (max-width: 640px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 .menu-separator:last-child {

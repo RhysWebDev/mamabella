@@ -5,13 +5,13 @@
 
     <div class="container mx-auto hide-mobile">
         <div class="flex justify-between items-center text-white py-4 px-8">
-            <div class="w-1/4 hidden sm:block">
+            <div class="w-1/4 sm:block tablet-hide">
                 <?php get_search_form(); ?>
             </div>
             <div class="w-full sm:w-1/4 flex justify-center">
                 <img src="{{ get_field('site_logo', 'options') }}">
             </div>
-            <div class="w-1/4 flex justify-between hidden sm:block">
+            <div class="w-1/4 flex justify-between tablet-hide sm:block">
                 <ul class="w-3/4 flex justify-between header__links gap-x-3">
                     @if (have_rows('header_links', 'options'))
                         @while (have_rows('header_links', 'options'))

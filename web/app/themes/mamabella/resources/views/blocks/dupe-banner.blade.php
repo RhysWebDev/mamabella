@@ -41,7 +41,7 @@
                         @php(the_row())
                         <div class="dupe-banner__product flex flex-col md:flex-row">
                             <div class="dupe-banner__image w-full md:w-1/2">
-                                <img class="h-full" src="{{ get_sub_field('dupe_image') }}">
+                                <img class="h-full w-full" src="{{ get_sub_field('dupe_image') }}">
                             </div>
                             <div class="dupe-banner__content w-full md:w-1/2 bg-white py-[1rem] px-[2rem] text-primary">
                                 <div class="dupe-banner__badge mb-[0.5rem] font-bold font-secondary uppercase">
