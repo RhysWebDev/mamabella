@@ -12,7 +12,7 @@
   SupportsMultiple: false
 --}}
 
-<section class="w-full quicklinks mt-[1rem] mb-[2rem]">
+<section class="w-full quicklinks mt-[1rem] mb-[2rem] hidden md:block">
     <div class="slider-container-quicklinks flex flex-row items-center ">
         <button
             class="slide-arrow slide-left bg-darkPink px-[1rem] py-[2rem] text-white text-center rounded-tl-[10px] rounded-bl-[10px]"><i
@@ -37,4 +37,35 @@
             class="slide-arrow slide-right bg-darkPink px-[1rem] py-[2rem] text-white text-center rounded-tr-[10px] rounded-br-[10px]"><i
                 class="fas fa-chevron-right"></i></button>
     </div>
+</section>
+
+<section class="quicklinks w-full mt-[1rem] mb-[2rem] block md:hidden">
+
+    @if (have_rows('quick_links'))
+        <div class="justify-between flex flex-col border-[#B33558] border-t-[2px] border-b-[2px] py-[2rem] w-full">
+            <a href="#" class=" justify-between pr-[1rem] font-bold min-w-[140px] uppercase mb-[1rem]">Jump
+                to:</a>
+            @while (have_rows('quick_links'))
+                @php(the_row())
+                <a href="{{ get_sub_field('link_url') }}"
+                    class=" mr-[5rem] justify-between min-w-[fit-content] text-[14px] font-secondary text-primary py-[0.5rem] w-full">{{ get_sub_field('link_text') }}</a>
+            @endwhile
+        </div>
+    @endif
+</section>
+
+<section class="quicklinks max-w-[116px] top-[30px] sticky bottom-[650px] h-[0px] hidden md:block">
+
+    @if (have_rows('quick_links'))
+        <div
+            class="justify-between flex flex-col border-[#B33558] border-t-[2px] border-b-[2px] py-[2rem] max-w-[116px] relative left-[-125px]">
+            <a href="#" class=" justify-between pr-[1rem] font-bold min-w-[140px] uppercase mb-[1rem]">Jump
+                to:</a>
+            @while (have_rows('quick_links'))
+                @php(the_row())
+                <a href="{{ get_sub_field('link_url') }}"
+                    class=" mr-[5rem] justify-between min-w-[fit-content] text-[14px] font-secondary text-primary py-[0.5rem] w-full">{{ get_sub_field('link_text') }}</a>
+            @endwhile
+        </div>
+    @endif
 </section>
