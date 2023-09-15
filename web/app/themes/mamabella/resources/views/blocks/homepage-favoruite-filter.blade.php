@@ -1,6 +1,6 @@
 {{--
-  Title: Product Filter
-  Description: Product Filter
+  Title: Homepage Filter
+  Description: Homepage Filter
   Category: formatting
   Icon: filter
   Keywords: hero
@@ -40,6 +40,9 @@
                 {!! do_shortcode('[facetwp facet="skintypes"]') !!}
                 {!! do_shortcode('[facetwp facet="finish"]') !!}
                 {!! do_shortcode('[facetwp submit="/find-your-favourite/" label="Submit"]') !!}
+            </div>
+            <div class="hidden">
+                {!! do_shortcode('[facetwp template="products"]') !!}
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 select.facetwp-dropdown {
   padding: 1rem;
   border-radius: 30px;
-  min-width: 335px;
+  min-width: 100%;
   font-family: $secondary-font;
   text-transform: uppercase;
   font-weight: 500;
@@ -10,7 +10,7 @@ select.facetwp-dropdown {
 
 .fwp-submit {
   background: $primary-color;
-  min-width: 335px;
+  min-width: 100%;
   border-radius: 30px;
   font-family: $secondary-font;
   color: $clr-white;
