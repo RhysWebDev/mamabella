@@ -28,7 +28,7 @@
                 {!! get_field('content') !!}
             </div>
         </div>
-        <div class="w-full @if (is_page(451)) w-full @else lg:w-3/4 @endif">
+        <div class="w-full px-[3rem] @if (is_page(451)) w-full @else lg:w-3/4 @endif">
             <div
                 class="filter__row grid grid-cols-1 md:grid-cols-3 gap-x-8 @if (is_page(451)) justify-start @else justify-end @endif top_row self-center flex items-center flex-wrap">
                 {!! do_shortcode('[facetwp facet="skin_type"]') !!}
