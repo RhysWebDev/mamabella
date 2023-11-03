@@ -9,7 +9,7 @@
                 <?php get_search_form(); ?>
             </div>
             <div class="w-full sm:w-1/4 flex justify-center">
-                <img src="{{ get_field('site_logo', 'options') }}">
+                <a href="{{ home_url() }}"><img src="{{ get_field('site_logo', 'options') }}"></a>
             </div>
             <div class="w-1/4 flex justify-between tablet-hide sm:block">
                 <ul class="w-3/4 flex justify-between header__links gap-x-3">
@@ -19,7 +19,8 @@
                             <li>
                                 <a href="{{ get_sub_field('link') }}" class="flex flex-col  items-center space-y-2">
                                     <img src="{{ get_sub_field('icon') }}" class="w-6 h-6 header__icon" alt="Icon">
-                                    <span class="text-black header__icon-text">{{ get_sub_field('text') }}</span>
+                                    <span
+                                        class="text-black header__icon-text font-secondary">{{ get_sub_field('text') }}</span>
                                 </a>
                             </li>
                         @endwhile

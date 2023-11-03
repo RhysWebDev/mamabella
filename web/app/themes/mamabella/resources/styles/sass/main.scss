@@ -57,3 +57,33 @@
 .fwp-submit {
   margin-bottom: 40px;
 }
+
+.ff_t_c {
+  p {
+    font-size: 17px !important;
+    color: #8a94a1;
+  }
+}
+
+.bold-font {
+  p {
+    font-weight: bold;
+  }
+}
+
+.competition-field {
+  border: 2px solid $primary-color !important;
+}
+
+.wp-block-button__link {
+  background: #26364b;
+  border-radius: 100px;
+  color: #fff;
+  font-family: semplicitapro, sans-serif;
+  font-size: 14px;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}

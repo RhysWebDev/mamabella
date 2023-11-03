@@ -9,6 +9,7 @@
     // Styles for the main menu items
     font-weight: bold;
     font-family: theme('fontFamily.monsterrat');
+    letter-spacing: 1px;
 
     &:hover {
       color: theme('colors.secondary');

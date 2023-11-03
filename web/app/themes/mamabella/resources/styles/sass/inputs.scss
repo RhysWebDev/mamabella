@@ -2,4 +2,18 @@
   border-radius: 2rem;
   border: 1px solid #ccc;
   padding: 1rem 2rem;
+  color: theme('colors.primary');
+  font-family: theme('fontFamily.primary');
+  font-weight: bold;
+  width: 100%;
+}
+
+.search-form {
+  position: relative;
+  button {
+    position: absolute;
+    top: 20px;
+    right: 15%;
+    color: theme('colors.primary');
+  }
 }

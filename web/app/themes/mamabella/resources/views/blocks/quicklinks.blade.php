@@ -17,7 +17,8 @@
         @if (have_rows('quick_links'))
             @while (have_rows('quick_links'))
                 @php(the_row())
-                <a class="button btn btn--outline" href="{{ get_sub_field('quick_link_url') }}">
+                <a class="button btn btn--outline" data-tab="{{ get_sub_field('quick_link_cat') }}"
+                    href="{{ get_sub_field('quick_link_cat') }}">
                     {{ get_sub_field('quick_link') }}
                 </a>
             @endwhile

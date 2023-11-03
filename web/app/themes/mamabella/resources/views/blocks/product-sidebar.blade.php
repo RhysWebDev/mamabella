@@ -36,10 +36,10 @@
                             </div>
                         </div>
                         <div class="w-3/5 p-4 flex flex-col justify-center">
-                            <h3 class="text-lg font-bold">{{ $product->post_title }}</h3>
-                            <span class="block font-semibold text-gray-700 mt-2">{{ get_field('price') }}</span>
+                            <h3 class="text-lg font-secondary text-[#3D4D63] font-bold">
+                                {{ $product->post_title }}</h3>
+                            <span class="block text-[14px] text-[#79839C]">{{ get_field('price', $product->ID) }}</span>
                             <p class="text-sm mt-2">{{ $product->post_excerpt }}</p>
-                            <!-- Additional product details can be added here -->
                         </div>
                     </div>
 

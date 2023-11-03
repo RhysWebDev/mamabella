@@ -54,7 +54,7 @@
 
     <div class="container mx-auto pt-[2rem]">
         <div class="flex flex-row justify-between">
-            <div class="policies flex flex-row text-white">
+            <div class="policies flex flex-col md:flex-row text-white gap-x-[1rem]">
                 <a href="#">© Copyright 2023</a>
                 <a href="#">Privacy Policy </a>
                 <a href="#">Cookies</a>

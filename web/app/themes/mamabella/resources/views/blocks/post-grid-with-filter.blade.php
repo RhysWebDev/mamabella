@@ -61,13 +61,13 @@
                         Simply tell us what you're looking for and we'll suggest the best, tried & tested products.
                     </div>
                     <div
-                        class="filter__row flex flex-col lg:flex-row gap-x-8 @if (is_page(451)) justify-start @else justify-end @endif top_row self-center flex items-center flex-wrap">
+                        class="filter__row flex flex-col w-full gap-x-8 @if (is_page(451)) justify-start @else justify-end @endif top_row self-center flex items-center flex-wrap">
                         {!! do_shortcode('[facetwp facet="skin_type"]') !!}
                         {!! do_shortcode('[facetwp facet="toner"]') !!}
                         {!! do_shortcode('[facetwp facet="price"]') !!}
                     </div>
                     <div
-                        class="filter__row flex flex-col lg:flex-row gap-x-8 @if (is_page(451)) justify-start @else justify-end @endif bottom_row self-center flex items-center flex-wrap @if (is_page(451)) w-full @endif">
+                        class="filter__row flex flex-col w-full gap-x-8 @if (is_page(451)) justify-start @else justify-end @endif bottom_row self-center flex items-center flex-wrap @if (is_page(451)) w-full @endif">
                         {!! do_shortcode('[facetwp facet="skintypes"]') !!}
                         {!! do_shortcode('[facetwp facet="finish"]') !!}
                         {!! do_shortcode('[facetwp submit="/find-your-favourite/" label="Submit"]') !!}
@@ -101,3 +101,20 @@
         @endforeach
     </div>
 </section>
+
+<style>
+    .post-grid-with-filter .facetwp-facet {
+        width: 80%;
+    }
+
+    .fwp-submit {
+        max-width: 80%;
+        min-width: 80% !important;
+    }
+
+    .post-grid-with-filter .fwp-submit,
+    .post-grid-with-filter select.facetwp-dropdown {
+        max-width: 100%;
+        min-width: 100%;
+    }
+</style>

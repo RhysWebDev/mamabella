@@ -127,3 +127,5 @@ document.addEventListener('DOMContentLoaded', function () {
     navMobile.classList.toggle('nav-open');
   });
 });
+
+//  Home ajax

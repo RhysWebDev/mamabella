@@ -1,9 +1,10 @@
 .product__image {
+  height: 100%;
   img {
-    max-height: 185px;
     min-height: 185px;
     width: 135px;
     object-fit: cover;
+    height: 100%;
   }
 }
 

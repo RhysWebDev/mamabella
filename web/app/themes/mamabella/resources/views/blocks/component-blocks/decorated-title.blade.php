@@ -184,8 +184,8 @@
                     @if (get_sub_field('show_author_box'))
                         <div
                             class="decorated-title__article-footer grid grid-cols-12 p-[1rem] items-center border-[8px] border-secondary">
-                            <div class="col-3 col-span-3">
-                                <img class="w-full" src="{{ get_sub_field('author_image') }}">
+                            <div class="col-2 col-span-2">
+                                <img class="w-auto max-h-[147px]" src="{{ get_sub_field('author_image') }}">
                             </div>
                             <div class="col-9 col-span-9">
                                 <h3 class="text-secondary font-secondary text-[20px] mb-[0.5rem]">
@@ -286,6 +286,61 @@
                                     </a>
                                 </div>
                             @endif
+                        </div>
+                    </div>
+                @endif
+
+                @if (get_row_layout() === 'title_with_competition')
+                    <div class="decorated-title title-wrapper w-full mx-auto">
+                        <h2
+                            class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
+                            {!! get_sub_field('title') !!}</h2>
+                    </div>
+
+                    <div class="decorated-title__content content-wrapper px-[2rem]">
+                        {!! get_sub_field('content') !!}
+                    </div>
+
+                    <div class="decorated-title__competition max-w-[690px] mx-auto">
+                        <div class="verdict-box__product mt-[3rem]">
+                            <div
+                                class="product_box border-[2px] border-secondary rounded-tl-[10px] rounded-tr-[10px] mb-[3rem]">
+                                <div
+                                    class="box_title-wrapper bg-secondary px-[2rem] rounded-tl-[8px] rounded-tr-[8px]">
+                                    <h3
+                                        class="font-secondary text-[16px] md:text-[20px] text-center font-bold text-white uppercase py-[1rem]">
+                                        {{ get_sub_field('competition_title') }}</h3>
+                                </div>
+
+                                <div class="bold-font mb-[2rem] text-[20px] font-bold p-[2rem] pb-[0px] mb-[0px]">
+                                    {!! get_sub_field('competition_content') !!}
+                                </div>
+
+                                <div class="decorated-title__competition-form p-[2rem] pt-[0px]">
+                                    {!! get_sub_field('comeptition_form') !!}
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                @endif
+
+                @if (get_row_layout() === 'title_with_box')
+                    <div class="decorated-title__competition max-w-[690px] mx-auto">
+                        <div class="verdict-box__product mt-[3rem]">
+                            <div
+                                class="product_box border-[2px] border-secondary rounded-tl-[10px] rounded-tr-[10px] mb-[3rem]">
+                                <div
+                                    class="box_title-wrapper bg-secondary px-[2rem] rounded-tl-[8px] rounded-tr-[8px]">
+                                    <h3
+                                        class="font-secondary text-[16px] md:text-[20px] text-center font-bold text-white uppercase py-[1rem]">
+                                        {{ get_sub_field('box_title') }}</h3>
+                                </div>
+
+                                <div class="mb-[2rem] text-[20px] font-bold p-[2rem] pb-[0px] mb-[0px]">
+                                    {!! get_sub_field('box_content') !!}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 @endif

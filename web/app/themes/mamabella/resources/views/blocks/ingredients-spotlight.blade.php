@@ -32,20 +32,25 @@
         @php
             $alphabetArray = range('a', 'z');
         @endphp
-        <div class="max-w-[1130px] mx-auto py-[1.5rem]" id="a-z">
+        <div class="max-w-[1130px] mx-auto py-[1.5rem] justify-between flex flex-row" id="a-z">
             @foreach ($alphabetArray as $letter)
                 <a class="text-white uppercase text-[30px] font-secondary tracking-widest" href="#{{ $letter }}">
                     {{ $letter }} </a>
             @endforeach
         </div>
-
     </div>
 
     <div class="featured-article-ingredients mt-8 mb-8 container mx-auto max-w-[1270px] flex flex-col md:flex-row">
 
 
         <div class="filter_box bg-[#FEF1F1] max-w-[390px] md:min-w-[390px] min-h-[460px] rounded-[10px] p-[3rem]">
-            <h2 class="font-primary text-primary text-[30px] text-center">Filter</h2>
+            <h2 class="font-primary text-primary text-[30px] text-center mb-[2rem]">Filter</h2>
+            <div
+                class="filter__row flex flex-col w-full gap-x-8 gap-y-[1rem] @if (is_page(451)) justify-start @else justify-end @endif top_row self-center flex items-center flex-wrap">
+                {!! do_shortcode('[facetwp facet="skin"]') !!}
+                {!! do_shortcode('[facetwp facet="properties"]') !!}
+                {!! do_shortcode('[facetwp facet="type"]') !!}
+            </div>
         </div>
 
 
@@ -137,58 +142,59 @@
 
     <div
         class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 md:mt-0 max-w-[1260px] mx-auto gap-y-[2rem] justify-items-center pb-[4rem]">
+
         @php
-            // Assuming the ACF field name is 'post_type_selection'
-            $postTypeSelection = get_field('post_category');
-            
-            $queryArgs = [
-                'posts_per_page' => 8,
-                'meta_key' => '_thumbnail_id',
+            $postArgs = [
+                'post_type' => ['deals', 'duplicate', 'how-to', 'product', 'review'],
+                'posts_per_page' => 6,
+                'facetwp' => true,
             ];
-            
-            // Modify the query based on the selection
-            if ($postTypeSelection === 'Reviews') {
-                $queryArgs['post_type'] = 'review'; // Assuming the custom post type name for Reviews is 'reviews'
-            } elseif ($postTypeSelection === 'Deals') {
-                $queryArgs['post_type'] = 'deals'; // Assuming the custom post type name for Deals is 'deals'
-            } elseif ($postTypeSelection === 'How to') {
-                $queryArgs['post_type'] = 'how-to';
-            } else {
-                $queryArgs['post_type'] = 'post';
-            }
-            
-            $otherPosts = get_posts($queryArgs);
+            $posts = new WP_Query($postArgs);
         @endphp
 
-        @foreach ($otherPosts as $index => $otherPost)
-            @php
-                $title = get_the_title($otherPost);
-                $permalink = get_permalink($otherPost);
-                $thumbnail = get_the_post_thumbnail($otherPost, 'full');
-                $category = get_the_category($otherPost)[0]->name;
-            @endphp
+        @if ($posts->have_posts())
+            @while ($posts->have_posts())
+                @php
+                    $posts->the_post();
+                    $title = get_the_title();
+                    $permalink = get_permalink();
+                    $thumbnail = get_the_post_thumbnail(null, 'medium'); // 'medium' is the image size, you can change it
+                    $categories = get_the_category();
+                    $content = wp_trim_words(get_the_content(), 15, '...');
+                    $category = $categories ? esc_html($categories[0]->name) : ''; // get the first category
+                    $properties = get_the_terms(get_the_ID(), 'properties');
+                    $property = $properties && !is_wp_error($properties) ? esc_html($properties[0]->name) : '';
+                @endphp
 
-            <div class="max-w-[374px] post__wrap sm:mx-auto w-full">
-                <div class="relative">
-                    <div class="mb-0 relative post__image-wrap post-grid-with-filter__img">
-                        <a class="w-full post__image" href="{{ $permalink }}">
-                            {!! $thumbnail !!}
-                        </a>
-                        <div
-                            class="post__category-ingredients absolute bottom-0 left-0 text-white px-2 py-1 uppercase font-secondary text-[18px]">
-                            {{ $category }}
+                <div class="max-w-[374px] post__wrap sm:mx-auto w-full">
+                    <div class="relative">
+                        <div class="mb-0 relative post__image-wrap post-grid-with-filter__img">
+                            <a class="w-full post__image" href="{{ $permalink }}">
+                                {!! $thumbnail !!}
+                            </a>
+                            <div
+                                class="post__category-ingredients absolute bottom-0 left-0 text-white px-2 py-1 uppercase font-secondary text-[18px]">
+                                {{ $property }}
+                            </div>
+                        </div>
+
+                        <div class="post__content-wrap-ingredients p-[2.4rem] pr-[2.8rem]">
+                            <h3 class="uppercase post__title text-xl font-semibold mb-3 min-h-[84px] ">
+                                {{ $title }}
+                            </h3>
+                            <a href="{{ $permalink }}"
+                                class="btn btn--primary post__button mt-2 inline-block">READ</a>
                         </div>
                     </div>
-
-                    <div class="post__content-wrap-ingredients p-[2.4rem] pr-[2.8rem]">
-                        <h3
-                            class="uppercase post__title text-xl font-semibold mb-3 @if ($postTypeSelection === 'Reviews') min-h-fit  @else min-h-[84px] @endif ">
-                            {{ $title }}
-                        </h3>
-                        <a href="{{ $permalink }}" class="btn btn--primary post__button mt-2 inline-block">READ</a>
-                    </div>
                 </div>
-            </div>
-        @endforeach
+            @endwhile
+        @endif
     </div>
 </section>
+
+<style>
+    .facetwp-facet {
+        margin-bottom: 5px !important;
+        width: 100%;
+    }
+</style>

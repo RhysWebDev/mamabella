@@ -56,7 +56,7 @@
                     $description = get_field('description');
                 @endphp
                 <div>
-                    <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="grid grid-cols-1 force_collapse lg:grid-cols-2">
                         <div class="latest-reviews__image">
                             <img src="{{ $thumbnail }}" alt="{{ $title }}" class="slide-thumbnail">
                         </div>
@@ -78,5 +78,13 @@
             @endwhile
         @endif
     </div>
-
 </section>
+
+<style>
+    @media (max-width: 1280px) {
+
+        .force_collapse {
+            grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        }
+    }
+</style>

@@ -100,7 +100,7 @@
                                 <h2
                                     class="text-3xl text-white font-semibold font-primary max-w-[14ch] pt-[5rem] featured-article__title">
                                     {!! $title !!}</h2>
-                                <div class="flex-row flex swiper_nav_wrap">
+                                <div class="flex-row flex swiper_nav_wrap mr-[4rem]">
                                     <a href="{{ $permalink }}" class="mt-4 btn btn--secondary">Read More</a>
                                     <div
                                         class="featured-article__nav-inner flex flex-row gap-x-[4rem] justify-center items-center ">
@@ -127,7 +127,8 @@
                         </div>
                     </div>
                     <div class="w-full md:w-full lg:w-1/2">
-                        <img src="{{ $featuredImage }}" alt="Featured Image" class="w-full h-full object-cover">
+                        <img src="{{ $featuredImage }}" alt="Featured Image"
+                            class="w-full h-full object-cover rounded-br-[4rem]">
                     </div>
                 </div>
             </div>

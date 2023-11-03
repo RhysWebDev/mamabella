@@ -50,8 +50,8 @@
                 },
                 {
                     "key": "field_64771af31492e",
-                    "label": "Quick Link URL",
-                    "name": "quick_link_url",
+                    "label": "Quick Link Category",
+                    "name": "quick_link_cat",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -105,5 +105,5 @@
     "acfe_meta": "",
     "acfe_note": "",
     "acfe_form": 0,
-    "modified": 1685537564
+    "modified": 1696497608
 }
