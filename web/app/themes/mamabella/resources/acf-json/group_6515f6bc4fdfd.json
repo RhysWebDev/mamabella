@@ -92,6 +92,35 @@
                     "parent_repeater": "field_6515f890765a5"
                 },
                 {
+                    "key": "field_657a3d7508dd9",
+                    "label": "Product thumbnail",
+                    "name": "product_thumbnail",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_save_meta": 0,
+                    "uploader": "",
+                    "return_format": "url",
+                    "acfe_thumbnail": 0,
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "parent_repeater": "field_6515f890765a5"
+                },
+                {
                     "key": "field_6515f91ab8ee4",
                     "label": "Product Price",
                     "name": "product_price",
@@ -138,8 +167,13 @@
     "acfe_autosync": [
         "json"
     ],
-    "acfe_meta": "",
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
     "acfe_note": "",
     "acfe_form": 0,
-    "modified": 1695938857
+    "modified": 1702509958
 }

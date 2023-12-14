@@ -41,6 +41,13 @@
 }
 
 .decorated-title {
+  p {
+    a {
+      text-decoration: underline;
+      text-decoration-color: #b33558;
+    }
+  }
+
   &__review-box {
     padding: 4rem;
     &:before {
@@ -98,5 +105,12 @@
         // Add any additional styles for the numbers here
       }
     }
+  }
+}
+
+.decorated-title-wrap {
+  ul {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }

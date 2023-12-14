@@ -2,6 +2,12 @@ body {
   font-family: $secondary-font;
 }
 
+.semibold {
+  font-family: 'semplicitapro', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
 .title {
   &__stars {
     position: relative;
@@ -154,11 +160,73 @@ li {
   font-size: 18px;
 }
 
+ul {
+  list-style: circle;
+}
+
 cite {
   font-family: $primary-font;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 blockquote {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   margin-bottom: 3rem;
+  border-left: 4px solid theme('colors.secondary');
+  font-size: 16px;
+  margin-top: 2rem;
+}
+
+.wp-block-heading {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.content-wrapper {
+  p {
+    a {
+      text-decoration: underline;
+      text-decoration-color: #b33558;
+      color: #b33558;
+    }
+  }
+}
+
+.e-content {
+  p {
+    a {
+      text-decoration: underline;
+      text-decoration-color: #b33558;
+      color: #b33558;
+    }
+  }
+
+  ul {
+    padding-left: 1.5rem;
+  }
+}
+
+.quicklinks {
+  a {
+    text-decoration: none !important;
+    color: theme('colors.primary') !important;
+  }
+}
+
+.wp-block-button__link {
+  text-decoration: none !important;
+  color: white !important;
+}
+
+.products-item__wrap {
+  text-decoration: none !important;
+  color: theme('colors.primary') !important;
+}
+
+.decorated-title__content-dupe {
+  text-decoration: none !important;
+  color: theme('colors.primary') !important;
 }

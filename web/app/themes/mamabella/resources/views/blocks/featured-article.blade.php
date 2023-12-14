@@ -156,15 +156,16 @@
         <div class="w-full max-w-[374px] post__wrap  sm:mx-auto sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 p-4">
             <div class="relative">
                 <div class="mb-0 relative post__image-wrap">
-                    <a class="w-full post__image" href="{{ $permalink }}">
+                    <a class="w-full post__image">
                         {!! $thumbnail !!}
                     </a>
                     <div class="post__category absolute bottom-0 left-0 text-accent px-2 py-1 uppercase">
-                        {{ $category }}
+                        <a href="{{ $permalink }}">{{ $category }}</a>
                     </div>
                 </div>
 
-                <div class="post__content-wrap p-[2.4rem] pr-[2.8rem]">
+                <div class="post__content-wrap
+                            p-[2.4rem] pr-[2.8rem]">
                     <h3 class="uppercase post__title text-xl font-semibold mb-3">{{ $title }}</h3>
                     <a href="{{ $permalink }}" class="btn btn--primary post__button mt-2 inline-block">READ</a>
                 </div>

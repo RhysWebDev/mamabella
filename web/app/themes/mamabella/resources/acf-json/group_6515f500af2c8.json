@@ -29,6 +29,27 @@
             "mime_types": "",
             "preview_size": "medium",
             "library": "all"
+        },
+        {
+            "key": "field_657a2dd700719",
+            "label": "Credit",
+            "name": "credit",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -53,8 +74,13 @@
     "acfe_autosync": [
         "json"
     ],
-    "acfe_meta": "",
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
     "acfe_note": "",
     "acfe_form": 0,
-    "modified": 1695937841
+    "modified": 1702505949
 }

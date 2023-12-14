@@ -24,11 +24,17 @@
 
                 <div class="products-item flex flex-row px-[2rem] justify-between py-[1rem]">
                     <div class="products-item__wrap">
-                        <a href="{{ get_sub_field('product_link') }}">
-                            <i class="pr-[1rem] fas fa-shopping-cart"></i>{{ get_sub_field('product_title') }}
+                        <a class="flex flex-col md:flex-row justify-between gap-x-[2rem] items-center"
+                            href="{{ get_sub_field('product_link') }}">
+                            @if (get_sub_field('product_thumbnail'))
+                                <img class="w-[115px] h-auto" src=" {{ get_sub_field('product_thumbnail') }}">
+                                {{ get_sub_field('product_title') }}
+                            @else
+                                <i class="pr-[1rem] fas fa-shopping-cart"></i>{{ get_sub_field('product_title') }}
+                            @endif
                         </a>
                     </div>
-                    <div class="products-item__wrap">
+                    <div class="products-item__wrap items-center flex flex-col justify-center">
                         <a href="{{ get_sub_field('product_link') }}">
                             {{ get_sub_field('product_price') }}
                         </a>

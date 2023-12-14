@@ -28,18 +28,28 @@
     <div class="p-4 product_sidebar">
         <div class="product_sidebar--inner grid grid-cols-1 gap-4 items-center justify-center">
             @foreach ($products as $product)
-                <div class="bg-white shadow rounded-xl ">
+                <div class="bg-white shadow rounded-xl">
                     <div class="flex flex-row">
                         <div class="w-2/5 flex items-center ">
-                            <div class="product__image">
-                                {!! get_the_post_thumbnail($product->ID, 'full', ['class' => 'w-full']) !!}
-                            </div>
+                            <a href="{{ get_permalink($product->ID) }} ">
+                                <div class="product__image relative">
+                                    @if (get_field('badge', $product->ID))
+                                        <img class="badge w-[37px] h-[37px] absolute top-[10px] left-[10px]"
+                                            src="{{ get_field('badge', $product->ID) }}">
+                                    @endif
+                                    {!! get_the_post_thumbnail($product->ID, 'full', ['class' => 'w-full']) !!}
+                                </div>
+                            </a>
                         </div>
                         <div class="w-3/5 p-4 flex flex-col justify-center">
-                            <h3 class="text-lg font-secondary text-[#3D4D63] font-bold">
-                                {{ $product->post_title }}</h3>
-                            <span class="block text-[14px] text-[#79839C]">{{ get_field('price', $product->ID) }}</span>
-                            <p class="text-sm mt-2">{{ $product->post_excerpt }}</p>
+                            <a href=" {{ get_permalink($product->ID) }} ">
+                                <h3 class="text-lg font-secondary text-[#3D4D63]">
+                                    {{ $product->post_title }}</h3>
+
+                                <span
+                                    class="block text-[14px] text-[#79839C]">{{ get_field('price', $product->ID) }}</span>
+                                <p class="text-sm mt-2 opacity-[0.7]">{{ $product->post_excerpt }}</p>
+                            </a>
                         </div>
                     </div>
 

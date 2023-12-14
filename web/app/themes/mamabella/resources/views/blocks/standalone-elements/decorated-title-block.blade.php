@@ -11,10 +11,15 @@
 
 
 <div class="decorated-title title-wrapper w-full mx-auto" id="{{ get_field('link_id') }}">
-    <h2
-        class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
-        @if (get_field('title'))
+    @if (get_field('title'))
+        <h2
+            class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
+
             {!! get_field('title') !!}
-        @endif
-    </h2>
+
+        </h2>
+    @else
+        <div class="h-[45px]"></div>
+    @endif
+
 </div>

@@ -49,7 +49,7 @@
                             </div>
                         @else
                             <div class="image_source-wrapper">
-                                <img src="{{ get_sub_field('image_source') }}">
+                                <img class="w-full" src="{{ get_sub_field('image_source') }}">
                             </div>
                         @endif
 
@@ -60,11 +60,13 @@
                 @endif
 
                 @if (get_row_layout() == 'title_with_featured_image')
-                    <div class="decorated-title title-wrapper w-full mx-auto" id="{{ get_sub_field('link_id') }}">
-                        <h2
-                            class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
-                            {!! get_sub_field('title') !!}</h2>
-                    </div>
+                    @if (get_sub_field('title'))
+                        <div class="decorated-title title-wrapper w-full mx-auto" id="{{ get_sub_field('link_id') }}">
+                            <h2
+                                class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
+                                {!! get_sub_field('title') !!}</h2>
+                        </div>
+                    @endif
 
                     <img class="w-full mx-auto px-[2rem] mb-[2rem]" src="{{ get_sub_field('featured_image') }}">
 
@@ -130,12 +132,12 @@
                             {!! get_sub_field('title') !!}</h2>
                     </div>
 
-                    <div class="decorated-title__products pt-[3rem] px-[2rem]">
+                    <div class="decorated-title__products pt-[1rem] px-[2rem]">
                         @if (have_rows('products'))
                             @while (have_rows('products'))
                                 @php(the_row())
                                 <div class="decorated-title__product-wrapper py-[2rem]">
-                                    <div class="grid grid-cols-12">
+                                    <div class="grid grid-cols-12 gap-x-[2rem]">
                                         <div class="col col-span-4 flex-col">
                                             <img src="{{ get_sub_field('product_image') }}">
                                         </div>
@@ -154,6 +156,7 @@
                                                                 href="{{ get_sub_field('link_url') }}">
                                                                 {{ get_sub_field('link_text') }}
                                                             </a>
+                                                            <div>{{ get_sub_field('product_information') }} </div>
                                                         </div>
                                                         <div class="col col-span-8 flex flex-end justify-end">
                                                             <p class="font-secondary text-[20px] text-primary">

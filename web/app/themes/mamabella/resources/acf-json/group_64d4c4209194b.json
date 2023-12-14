@@ -883,6 +883,29 @@
                                             "prepend": "",
                                             "append": "",
                                             "parent_repeater": "field_64e495291110c"
+                                        },
+                                        {
+                                            "key": "field_657a4231ac213",
+                                            "label": "Product Info",
+                                            "name": "product_information",
+                                            "aria-label": "",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "acfe_save_meta": 0,
+                                            "default_value": "",
+                                            "acfe_textarea_code": 0,
+                                            "maxlength": "",
+                                            "rows": "",
+                                            "placeholder": "",
+                                            "new_lines": "",
+                                            "parent_repeater": "field_64e495291110c"
                                         }
                                     ],
                                     "parent_repeater": "field_64d4fc7402e56"
@@ -1407,8 +1430,13 @@
     "acfe_autosync": [
         "json"
     ],
-    "acfe_meta": "",
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
     "acfe_note": "",
     "acfe_form": 0,
-    "modified": 1695380943
+    "modified": 1702511269
 }

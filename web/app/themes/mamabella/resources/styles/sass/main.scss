@@ -87,3 +87,32 @@
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
+
+// Seperator block
+
+.wp-block-separator {
+  padding-bottom: 1.5rem;
+  border-top: 2px solid theme('colors.secondary');
+  border-bottom: 0px;
+}
+
+.e-content p {
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.ask_experts_wrap {
+  display: flex;
+  position: relative;
+}
+
+.ask_experts {
+  position: relative;
+  left: 0px;
+}
+
+.ask_experts_background {
+  position: absolute;
+  left: 0px;
+}

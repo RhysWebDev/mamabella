@@ -2,7 +2,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://use.typekit.net/egk2ikd.css">
 
-
     <div class="container mx-auto hide-mobile">
         <div class="flex justify-between items-center text-white py-4 px-8">
             <div class="w-1/4 sm:block tablet-hide">

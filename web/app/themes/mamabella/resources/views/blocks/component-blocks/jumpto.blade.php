@@ -23,11 +23,12 @@
                 <a href="#" class="slider-item justify-between pr-[1rem] font-bold min-w-[140px] uppercase">Jump
                     to:</a>
                 <div class="slider-items flex-row flex overflow-x-scroll ">
-                    <div class="slider-inner uppercase pl-[1rem] flex-row flex ">
+                    <div class="slider-inner pl-[1rem] flex-row flex ">
                         @while (have_rows('quick_links'))
                             @php(the_row())
                             <a href="{{ get_sub_field('link_url') }}"
-                                class="slider-item mr-[5rem] justify-between min-w-[fit-content]">{{ get_sub_field('link_text') }}</a>
+                                class="min-w-[200px] slider-item justify-between min-w-[fit-content] text-primary">{{ get_sub_field('link_text') }}</a>
+                            <div class="min-w-[80px] text-center text-primary font-bold">|</div>
                         @endwhile
                     </div>
                 </div>
@@ -64,7 +65,7 @@
             @while (have_rows('quick_links'))
                 @php(the_row())
                 <a href="{{ get_sub_field('link_url') }}"
-                    class=" mr-[5rem] justify-between min-w-[fit-content] text-[14px] font-secondary text-primary py-[0.5rem] w-full">{{ get_sub_field('link_text') }}</a>
+                    class=" mr-[5rem] text-primary justify-between min-w-[fit-content] text-[14px] font-secondary text-primary py-[0.5rem] w-full">{{ get_sub_field('link_text') }}</a>
             @endwhile
         </div>
     @endif
