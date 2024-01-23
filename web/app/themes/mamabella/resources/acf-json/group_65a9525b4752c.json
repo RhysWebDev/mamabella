@@ -1,88 +1,7 @@
 {
     "key": "group_65a9525b4752c",
-    "title": "(Sidebar) Favourites",
+    "title": "[SA Component] Sidebar Advertisment",
     "fields": [
-        {
-            "key": "field_65a9525b55780",
-            "label": "Checklist",
-            "name": "checklist",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_save_meta": 0,
-            "acfe_repeater_stylised_button": 0,
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_65a9525b570a8",
-                    "label": "Checklist item",
-                    "name": "checklist_item",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_save_meta": 0,
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65a9525b55780"
-                }
-            ]
-        },
-        {
-            "key": "field_65a9525b55789",
-            "label": "Post type to query",
-            "name": "post_type",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_save_meta": 0,
-            "choices": {
-                "product": "product",
-                "how-to": "how-to",
-                "deals": "deals",
-                "review": "review",
-                "post": "post",
-                "duplicate": "duplicate"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
-        },
         {
             "key": "field_65a9525b55791",
             "label": "Advertisment",
@@ -211,9 +130,9 @@
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "block",
                 "operator": "==",
-                "value": "sidebars"
+                "value": "acf\/advertisment-sidebar"
             }
         ]
     ],
@@ -238,5 +157,5 @@
     },
     "acfe_note": "",
     "acfe_form": 0,
-    "modified": 1705595491
+    "modified": 1706011275
 }

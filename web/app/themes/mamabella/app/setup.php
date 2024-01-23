@@ -133,4 +133,38 @@ add_action('widgets_init', function () {
         'name' => __('Footer', 'sage'),
         'id' => 'sidebar-footer',
     ] + $config);
+
+    register_sidebar([
+        'name' => __('How to', 'sage'),
+        'id' => 'howto-sidebar',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Articles', 'sage'),
+        'id' => 'article-sidebar',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Review', 'sage'),
+        'id' => 'review-sidebar',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Product', 'sage'),
+        'id' => 'product-sidebar',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Deals', 'sage'),
+        'id' => 'deals-sidebar',
+    ] + $config);
+
+    register_sidebar([
+        'name' => __('Favourites', 'sage'),
+        'id' => 'favourites-sidebar',
+    ] + $config);
+
+
+
+
 });

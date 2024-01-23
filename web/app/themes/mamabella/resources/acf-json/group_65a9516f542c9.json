@@ -1,6 +1,6 @@
 {
     "key": "group_65a9516f542c9",
-    "title": "(Sidebar) Article",
+    "title": "[SA Component] Checklist Block",
     "fields": [
         {
             "key": "field_65a9516f62554",
@@ -49,171 +49,14 @@
                     "parent_repeater": "field_65a9516f62554"
                 }
             ]
-        },
-        {
-            "key": "field_65a9516f6255d",
-            "label": "Post type to query",
-            "name": "post_type",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_save_meta": 0,
-            "choices": {
-                "product": "product",
-                "how-to": "how-to",
-                "deals": "deals",
-                "review": "review",
-                "post": "post",
-                "duplicate": "duplicate"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "allow_custom": 0,
-            "search_placeholder": ""
-        },
-        {
-            "key": "field_65a9519bc5d6b",
-            "label": "Advertisment",
-            "name": "advertisment",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "acfe_save_meta": 0,
-            "acfe_repeater_stylised_button": 0,
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_65a951c2c5d6d",
-                    "label": "Advertisment Background",
-                    "name": "advertisment_background",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_save_meta": 0,
-                    "uploader": "",
-                    "return_format": "url",
-                    "acfe_thumbnail": 0,
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "parent_repeater": "field_65a9519bc5d6b"
-                },
-                {
-                    "key": "field_65a951a4c5d6c",
-                    "label": "Advertisment title",
-                    "name": "advertisment_title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_save_meta": 0,
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65a9519bc5d6b"
-                },
-                {
-                    "key": "field_65a951d0c5d6e",
-                    "label": "Advertisment Image",
-                    "name": "advertisment_image",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_save_meta": 0,
-                    "uploader": "",
-                    "return_format": "url",
-                    "acfe_thumbnail": 0,
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium",
-                    "library": "all",
-                    "parent_repeater": "field_65a9519bc5d6b"
-                },
-                {
-                    "key": "field_65a951dec5d6f",
-                    "label": "Advertisment Button",
-                    "name": "advertisment_button",
-                    "aria-label": "",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_save_meta": 0,
-                    "return_format": "array",
-                    "parent_repeater": "field_65a9519bc5d6b"
-                }
-            ]
         }
     ],
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "block",
                 "operator": "==",
-                "value": "sidebars"
+                "value": "acf\/checklist-block"
             }
         ]
     ],
@@ -238,5 +81,5 @@
     },
     "acfe_note": "",
     "acfe_form": 0,
-    "modified": 1705595383
+    "modified": 1706010858
 }

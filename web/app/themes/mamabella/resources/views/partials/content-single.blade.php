@@ -94,15 +94,15 @@
                     <div
                         class="post-specific-sidebar md:pl-[1rem] article__sidebar flex flex-col md:max-w-[336px] md:min-w-[336px] pt-[3rem]">
                         @if (is_singular('how-to'))
-                            @include('sections.sidebarHowto')
+                            @php(get_sidebar('howto-sidebar'));
                         @elseif (is_singular('product'))
-                            @include('sections.sidebarProduct')
+                            @php(get_sidebar('product-sidebar'));
                         @elseif (is_singular('review'))
-                            @include('sections.sidebarReviews')
+                            @php(get_sidebar('review-sidebar'));
                         @elseif (is_singular('favourite'))
-                            @include('sections.sidebarFavourites')
+                            @php(get_sidebar('favourites-sidebar'));
                         @elseif (is_singular('deals'))
-                            @include('sections.sidebarDeals')
+                            @php(get_sidebar('deals-sidebar'));
                         @else
                             @include('sections.sidebar')
                         @endif
