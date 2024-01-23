@@ -22,9 +22,9 @@
 
                 @if (get_row_layout() == 'title_with_simple_text_layout')
                     <div class="decorated-title title-wrapper w-full mx-auto" id="{{ get_sub_field('link_id') }}">
-                        <h2
+                        <{{ get_field('heading') ?: 'h2' }}
                             class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
-                            {!! get_sub_field('title') !!}</h2>
+                            {!! get_sub_field('title') !!}</{{ get_field('heading') }}>
                     </div>
 
                     <div class="decorated-title__content content-wrapper px-[2rem] pb-[2rem]">
@@ -34,9 +34,9 @@
 
                 @if (get_row_layout() == 'title_with_video_or_image_and_text')
                     <div class="decorated-title title-wrapper w-full mx-auto" id="{{ get_sub_field('link_id') }}">
-                        <h2
+                        <{{ get_field('heading') ?: 'h2' }}
                             class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
-                            {!! get_sub_field('title') !!}</h2>
+                            {!! get_sub_field('title') !!}</{{ get_field('heading') }}>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 content-wrapper px-[2rem] pb-[2rem]">
@@ -62,9 +62,9 @@
                 @if (get_row_layout() == 'title_with_featured_image')
                     @if (get_sub_field('title'))
                         <div class="decorated-title title-wrapper w-full mx-auto" id="{{ get_sub_field('link_id') }}">
-                            <h2
+                            <{{ get_field('heading') ?: 'h2' }}
                                 class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
-                                {!! get_sub_field('title') !!}</h2>
+                                {!! get_sub_field('title') !!}</{{ get_field('heading') }}>
                         </div>
                     @endif
 
@@ -127,9 +127,9 @@
 
                 @if (get_row_layout() == 'title_with_products_listing')
                     <div class="decorated-title title-wrapper w-full mx-auto" id="{{ get_sub_field('link_id') }}">
-                        <h2
+                        <{{ get_field('heading') ?: 'h2' }}
                             class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
-                            {!! get_sub_field('title') !!}</h2>
+                            {!! get_sub_field('title') !!}</{{ get_field('heading') }}>
                     </div>
 
                     <div class="decorated-title__products pt-[1rem] px-[2rem]">
@@ -150,7 +150,7 @@
                                                 @while (have_rows('product_info'))
                                                     @php(the_row())
                                                     <div class="grid grid-cols-12">
-                                                        <div class="col col-span-4 flex-col">
+                                                        <div class="col col-span-8 flex-col">
                                                             <i class="fas fa-shopping-cart"></i>
                                                             <a class="underline text-secondary font-secondary text-[17px]"
                                                                 href="{{ get_sub_field('link_url') }}">
@@ -158,7 +158,7 @@
                                                             </a>
                                                             <div>{{ get_sub_field('product_information') }} </div>
                                                         </div>
-                                                        <div class="col col-span-8 flex flex-end justify-end">
+                                                        <div class="col col-span-4 flex flex-end justify-end">
                                                             <p class="font-secondary text-[20px] text-primary">
                                                                 {!! get_sub_field('price') !!}</p>
                                                         </div>
@@ -175,9 +175,9 @@
 
                 @if (get_row_layout() == 'title_text_with_article_footer')
                     <div class="decorated-title title-wrapper w-full mx-auto" id="{{ get_sub_field('link_id') }}">
-                        <h2
+                        <{{ get_field('heading') ?: 'h2' }}
                             class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
-                            {!! get_sub_field('title') !!}</h2>
+                            {!! get_sub_field('title') !!}</{{ get_field('heading') }}>
                     </div>
 
                     <div class="decorated-title__content content-wrapper px-[2rem] pb-[2rem]">
@@ -209,9 +209,9 @@
 
                 @if (get_row_layout() == 'title_with_review')
                     <div class="decorated-title title-wrapper w-full mx-auto" id="{{ get_sub_field('link_id') }}">
-                        <h2
+                        <{{ get_field('heading') ?: 'h2' }}
                             class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
-                            {!! get_sub_field('title') !!}</h2>
+                            {!! get_sub_field('title') !!}</{{ get_field('heading') }}>
                     </div>
 
                     <div class="decorated-title__content content-wrapper px-[2rem]">
@@ -228,9 +228,9 @@
 
                 @if (get_row_layout() == 'title_with_dupe')
                     <div class="decorated-title title-wrapper w-full mx-auto">
-                        <h2
+                        <{{ get_field('heading') ?: 'h2' }}
                             class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
-                            {!! get_sub_field('title') !!}</h2>
+                            {!! get_sub_field('title') !!}</{{ get_field('heading') }}>
                     </div>
 
                     <div class="decorated-title__content content-wrapper px-[2rem]">
@@ -295,16 +295,16 @@
 
                 @if (get_row_layout() === 'title_with_competition')
                     <div class="decorated-title title-wrapper w-full mx-auto">
-                        <h2
+                        <{{ get_field('heading') ?: 'h2' }}
                             class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
-                            {!! get_sub_field('title') !!}</h2>
+                            {!! get_sub_field('title') !!}</{{ get_field('heading') }}>
                     </div>
 
                     <div class="decorated-title__content content-wrapper px-[2rem]">
                         {!! get_sub_field('content') !!}
                     </div>
 
-                    <div class="decorated-title__competition max-w-[690px] mx-auto">
+                    <div class=" decorated-title__title-with-box max-w-[690px] mx-auto">
                         <div class="verdict-box__product mt-[3rem]">
                             <div
                                 class="product_box border-[2px] border-secondary rounded-tl-[10px] rounded-tr-[10px] mb-[3rem]">
@@ -335,9 +335,9 @@
                                 class="product_box border-[2px] border-secondary rounded-tl-[10px] rounded-tr-[10px] mb-[3rem]">
                                 <div
                                     class="box_title-wrapper bg-secondary px-[2rem] rounded-tl-[8px] rounded-tr-[8px]">
-                                    <h3
-                                        class="font-secondary text-[16px] md:text-[20px] text-center font-bold text-white uppercase py-[1rem]">
-                                        {{ get_sub_field('box_title') }}</h3>
+                                    <{{ get_field('heading') ?: 'h2' }}
+                                        class="bg-secondary text-center text-white font-primary text-[24px] md:text-[30px] px-[2rem] w-[fit-content] mx-auto relative z-3">
+                                        {!! get_sub_field('box_title') !!}</{{ get_field('heading') }}>
                                 </div>
 
                                 <div class="mb-[2rem] text-[20px] font-bold p-[2rem] pb-[0px] mb-[0px]">
@@ -346,6 +346,10 @@
                             </div>
                         </div>
                     </div>
+                @endif
+
+                @if (get_row_layout() == 'seperator')
+                    <hr class="pt-[1rem] wp-block-separator has-alpha-channel-opacity">
                 @endif
 
             @endwhile

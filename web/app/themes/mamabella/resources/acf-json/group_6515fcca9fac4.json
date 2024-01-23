@@ -99,12 +99,17 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "acfe_display_title": "",
+    "acfe_display_title": "Media Block",
     "acfe_autosync": [
         "json"
     ],
-    "acfe_meta": "",
+    "acfe_meta": {
+        "acfcloneindex": {
+            "acfe_meta_key": "",
+            "acfe_meta_value": ""
+        }
+    },
     "acfe_note": "",
     "acfe_form": 0,
-    "modified": 1695940045
+    "modified": 1705054807
 }

@@ -70,28 +70,6 @@
                     "parent_repeater": "field_6515f890765a5"
                 },
                 {
-                    "key": "field_6515f8bc765a7",
-                    "label": "Product Title",
-                    "name": "product_title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "acfe_save_meta": 0,
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_6515f890765a5"
-                },
-                {
                     "key": "field_657a3d7508dd9",
                     "label": "Product thumbnail",
                     "name": "product_thumbnail",
@@ -118,6 +96,28 @@
                     "mime_types": "",
                     "preview_size": "medium",
                     "library": "all",
+                    "parent_repeater": "field_6515f890765a5"
+                },
+                {
+                    "key": "field_6515f8bc765a7",
+                    "label": "Product Title",
+                    "name": "product_title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "acfe_save_meta": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
                     "parent_repeater": "field_6515f890765a5"
                 },
                 {
@@ -163,7 +163,7 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "acfe_display_title": "",
+    "acfe_display_title": "Product Box",
     "acfe_autosync": [
         "json"
     ],
@@ -175,5 +175,5 @@
     },
     "acfe_note": "",
     "acfe_form": 0,
-    "modified": 1702509958
+    "modified": 1705054816
 }

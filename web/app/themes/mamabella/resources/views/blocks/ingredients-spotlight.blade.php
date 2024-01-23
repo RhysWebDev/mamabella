@@ -174,7 +174,11 @@
                             </a>
                             <div
                                 class="post__category-ingredients absolute bottom-0 left-0 text-white px-2 py-1 uppercase font-secondary text-[18px]">
-                                {{ $property }}
+                                @if ($property)
+                                    {{ $property }}
+                                @else
+                                    {!! $category !!}
+                                @endif
                             </div>
                         </div>
 

@@ -116,3 +116,20 @@
   position: absolute;
   left: 0px;
 }
+
+// Default styling
+
+.alignleft {
+  float: left;
+  margin-right: 1.5rem;
+}
+
+.alignright {
+  float: right;
+  margin-left: 1.5rem;
+}
+
+// Admin
+a.ab-item {
+  color: #fff !important;
+}

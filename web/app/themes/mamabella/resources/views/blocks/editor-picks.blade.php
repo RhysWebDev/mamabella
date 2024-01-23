@@ -55,8 +55,10 @@
                             </div>
 
                             <div class="post__content-wrap p-[2.4rem] pr-[2.8rem]">
-                                <h3 class="uppercase post__title text-xl font-semibold mb-3">{!! $title !!}
-                                </h3>
+                                <a href="{{ $permalink }}">
+                                    <h3 class="uppercase post__title text-xl font-semibold mb-3">{!! $title !!}
+                                    </h3>
+                                </a>
                                 <a href="{{ $permalink }}"
                                     class="btn btn--primary post__button mt-2 inline-block">Read</a>
                             </div>

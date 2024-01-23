@@ -58,10 +58,12 @@
                             </div>
 
                             <div class="post__content-wrap p-[2.4rem] pr-[2.8rem] bg-white flex flex-col">
-                                <h3 class="uppercase post__title text-xl font-semibold mb-3 min-h-fit">
-                                    {{ $title }}
+                                <a href="{{ $permalink }}">
+                                    <h3 class="uppercase post__title text-xl font-semibold mb-3 min-h-fit">
+                                        {{ $title }}
 
-                                </h3>
+                                    </h3>
+                                </a>
                                 <a class="text-primary font-secondary uppercase text-[14px] font-medium flex flex-row mt-[1rem] mb-[1rem]"
                                     href="{{ $permalink }}">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mr-[1rem]" width="20"
@@ -145,8 +147,8 @@
                                             <g id="Group_2004" data-name="Group 2004"
                                                 transform="translate(-502.738 -7457.566)">
                                                 <circle id="Ellipse_99" data-name="Ellipse 99" cx="10"
-                                                    cy="10" r="10"
-                                                    transform="translate(502.738 7457.566)" fill="#b33558" />
+                                                    cy="10" r="10" transform="translate(502.738 7457.566)"
+                                                    fill="#b33558" />
                                                 <path id="Icon_awesome-shopping-cart"
                                                     data-name="Icon awesome-shopping-cart"
                                                     d="M9.466,5.4l.847-3.728a.43.43,0,0,0-.419-.526H2.854l-.164-.8A.43.43,0,0,0,2.268,0H.43A.43.43,0,0,0,0,.43V.717a.43.43,0,0,0,.43.43H1.683L2.942,7.3a1,1,0,1,0,1.2.154H7.9a1,1,0,1,0,1.14-.187l.1-.435a.43.43,0,0,0-.419-.526H3.91l-.117-.574H9.047A.43.43,0,0,0,9.466,5.4Z"

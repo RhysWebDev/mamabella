@@ -24,13 +24,27 @@
         <div class="verdict__box-pro column flex flex-col bg-[#FEF0F0] p-[1.5rem] rounded-lg">
             <strong class="text-[17px] font-bold text-primary mb-[0.5rem]"> {{ get_field('pro_title') }}</strong>
             <div class="verdict__box-pro-content">
-                {!! get_field('pro_content') !!}
+                @if (have_rows('pro_list'))
+                    <ul class="pros" style="padding-left: 0px !important;">
+                        @while (have_rows('pro_list'))
+                            @php(the_row())
+                            <li class="pl-0"> {{ get_sub_field('pro') }} </li>
+                        @endwhile
+                    </ul>
+                @endif
             </div>
         </div>
         <div class="verdict__box-cons column flex flex-col bg-[#DBDDE4] p-[1.5rem] rounded-lg">
             <strong class="text-[17px] font-bold text-primary mb-[0.5rem]"> {{ get_field('con_title') }}</strong>
             <div class="verdict__box-cons-content">
-                {!! get_field('con_content') !!}
+                @if (have_rows('con_list'))
+                    <ul class="cons" style="padding-left: 0px !important;">
+                        @while (have_rows('con_list'))
+                            @php(the_row())
+                            <li class="pl-0"> {{ get_sub_field('con') }} </li>
+                        @endwhile
+                    </ul>
+                @endif
             </div>
         </div>
     </div>

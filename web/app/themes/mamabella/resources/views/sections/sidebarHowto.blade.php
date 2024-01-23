@@ -1,28 +1,27 @@
-<div class="checklist-box">
-    <div class="checklist__box">
-        <div class="checklist__header bg-primary text-center py-[2rem] rounded-t-[10px]">
-            <h2 class="text-[30px] font-primary text-white font-bold">Tips & Tricks</h2>
-        </div>
-        <div class="checklist__items bg-[#F6F9FB]">
-            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem]">
-                @include('partials.svgcheck')
-                <p class="font-secondary text-primary">Trim to Size</p>
-            </div>
-            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem] bg-white">
-                @include('partials.svgcheck')
-                <p class="font-secondary text-primary">Apply glue and wait 30 secs</p>
-            </div>
-            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem]">
-                @include('partials.svgcheck')
-                <p class="font-secondary text-primary">Use tweezers</p>
-            </div>
-            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem]  bg-white">
-                @include('partials.svgcheck')
-                <p class="font-secondary text-primary">Keep eyes open</p>
-            </div>
-        </div>
+<h1>{{ get_field('checklist', 'options') }} </h1>
+
+
+<div class="checklist__box">
+    <div class="checklist__header bg-primary text-center py-[2rem] rounded-t-[10px]">
+        <h2 class="text-[30px] font-primary text-white font-bold">Tips & Tricks</h2>
+    </div>
+    <div class="checklist__items bg-[#F6F9FB]">
+
+        @if (get_field('how-to-checklist', 'option'))
+            @while (has_rows('how-to-checklist', 'option'))
+                @php(the_row())
+                <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem]">
+                    @include('partials.svgcheck')
+                    <p class="font-secondary text-primary">{{ get_sub_field('checklist_item') }}</p>
+                </div>
+            @endwhile
+        @endif
+
     </div>
 </div>
+
+
+
 
 
 <div class="mt-[2rem] flex flex-col min-h-[333px] w-full bg-[#D4D7DF] p-[5rem] items-center justify-center">

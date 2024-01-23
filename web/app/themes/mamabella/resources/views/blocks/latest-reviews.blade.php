@@ -14,12 +14,12 @@
 
 @php
     $background_image = get_field('background_image');
-    
+
     $reviews = new WP_Query([
         'post_type' => 'review',
         'posts_per_page' => -1,
     ]);
-    
+
 @endphp
 
 <section class="text-center latest-reviews py-[3rem]"
@@ -56,15 +56,18 @@
                     $description = get_field('description');
                 @endphp
                 <div>
-                    <div class="grid grid-cols-1 force_collapse lg:grid-cols-2">
+                    <div class="grid grid-cols-1 force_collapse lg:grid-cols-2 min-h-[494px]">
                         <div class="latest-reviews__image">
-                            <img src="{{ $thumbnail }}" alt="{{ $title }}" class="slide-thumbnail">
+                            <img src="{{ $thumbnail }}" alt="{{ $title }}"
+                                class="slide-thumbnail h-full object-cover">
                         </div>
                         <div
                             class="latest-reviews__content bg-white shadow justify-center text-left py-[2rem] px-[2rem] flex flex-col">
-                            <h3 class="slide-title text-[25px] font-bold font-secondary text-primary">
-                                {{ $title }}
-                            </h3>
+                            <a href="{{ $permalink }}">
+                                <h3 class="slide-title text-[25px] font-bold font-secondary text-primary">
+                                    {{ $title }}
+                                </h3>
+                            </a>
                             <p class="slide-tagline font-secondary text-primary font-medium text-[18px] underline">
                                 {{ get_field('tagline', $post_id) }}</p>
                             <div

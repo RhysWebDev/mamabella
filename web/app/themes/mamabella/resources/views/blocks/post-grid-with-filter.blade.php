@@ -21,12 +21,12 @@
         @php
             // Assuming the ACF field name is 'post_type_selection'
             $postTypeSelection = get_field('post_category');
-            
+
             $queryArgs = [
                 'posts_per_page' => 8,
                 'meta_key' => '_thumbnail_id',
             ];
-            
+
             // Modify the query based on the selection
             if ($postTypeSelection === 'Reviews') {
                 $queryArgs['post_type'] = 'review'; // Assuming the custom post type name for Reviews is 'reviews'
@@ -37,7 +37,7 @@
             } else {
                 $queryArgs['post_type'] = 'post';
             }
-            
+
             $otherPosts = get_posts($queryArgs);
         @endphp
 
@@ -90,10 +90,12 @@
                     </div>
 
                     <div class="post__content-wrap p-[2.4rem] pr-[2.8rem]">
-                        <h3
-                            class="uppercase post__title text-xl font-semibold mb-3 @if ($postTypeSelection === 'Reviews') min-h-fit  @else min-h-[84px] @endif ">
-                            {{ $title }}
-                        </h3>
+                        <a href="{{ $permalink }}">
+                            <h3
+                                class="uppercase post__title text-xl font-semibold mb-3 @if ($postTypeSelection === 'Reviews') min-h-fit  @else min-h-[84px] @endif ">
+                                {{ $title }}
+                            </h3>
+                        </a>
                         <a href="{{ $permalink }}" class="btn btn--primary post__button mt-2 inline-block">READ</a>
                     </div>
                 </div>

@@ -21,14 +21,16 @@
         class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 md:mt-0 mx-auto gap-y-[2rem] justify-items-center max-w-[1240px]">
         @php
             $facetResultsArgs = [
-                'post_type' => ['deals', 'duplicate', 'how-to', 'product', 'review'],
+                // 'post_type' => ['deals', 'duplicate', 'how-to', 'product', 'review'],
+                'post_type' => ['product'],
+                'category_name' => 'best-match,best-budget,best-luxury',
                 'posts_per_page' => 3,
                 'facetwp' => true,
             ];
-            
+
             $facetResults = new WP_Query($facetResultsArgs);
             $excludedPosts = [];
-            
+
         @endphp
 
 
@@ -57,10 +59,12 @@
                         </div>
 
                         <div class="post__content-wrap p-[2.4rem] pr-[2.8rem] bg-white flex flex-col">
-                            <h3 class="uppercase post__title text-xl font-semibold mb-3 min-h-fit">
-                                {{ $title }}
+                            <a href="{{ $permalink }}">
+                                <h3 class="uppercase post__title text-xl font-semibold mb-3 min-h-fit">
+                                    {{ $title }}
 
-                            </h3>
+                                </h3>
+                            </a>
                             {{-- @if ($price)
                                 <a class="text-primary font-secondary uppercase text-[14px] font-medium flex flex-row mt-[1rem] mb-[1rem]"
                                     href="{{ $permalink }}">
@@ -109,7 +113,8 @@
             class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8 md:mt-0 mx-auto gap-y-[2rem] justify-items-center max-w-[1240px]">
             @php
                 $otherResultArgs = [
-                    'post_type' => ['deals', 'duplicate', 'how-to', 'product', 'review'],
+                    // 'post_type' => ['deals', 'duplicate', 'how-to', 'product', 'review'],
+                    'post_type' => ['product'],
                     'posts_per_page' => 6,
                     'post__not_in' => $excludedPosts, // Exclude the top 3 posts
                     'facetwp' => true,
@@ -141,10 +146,12 @@
                             </div>
 
                             <div class="post__content-wrap p-[2.4rem] pr-[2.8rem] bg-white flex flex-col">
-                                <h3 class="uppercase post__title text-xl font-semibold mb-3">
-                                    {{ $title }}
+                                <a href="{{ $permalink }}">
+                                    <h3 class="uppercase post__title text-xl font-semibold mb-3">
+                                        {{ $title }}
 
-                                </h3>
+                                    </h3>
+                                </a>
                                 <a class="text-primary font-secondary uppercase text-[14px] font-medium flex flex-row mt-[1rem] mb-[1rem]"
                                     href="{{ $permalink }}">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="mr-[1rem]" width="20"

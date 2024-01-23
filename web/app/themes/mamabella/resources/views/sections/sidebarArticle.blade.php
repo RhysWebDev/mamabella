@@ -3,27 +3,25 @@
         <div class="checklist__header bg-primary text-center py-[2rem] rounded-t-[10px]">
             <h2 class="text-[30px] font-primary text-white font-bold">Tips & Tricks</h2>
         </div>
-        <div class="checklist__items bg-[#F6F9FB]">
-            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem]">
-                @include('partials.svgcheck')
-                <p class="font-secondary text-primary">Trim to Size</p>
+        @if (have_rows('quick_links'))
+            <div class="checklist__items bg-[#F6F9FB]">
+                @while (have_rows('quick_links'))
+                    @php(the_row())
+                    <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem]">
+                        @include('partials.svgcheck')
+                        <p class="font-secondary text-primary">{{ get_sub_field(checklist_item) }}</p>
+                    </div>
+                @endwhile
             </div>
-            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem] bg-white">
-                @include('partials.svgcheck')
-                <p class="font-secondary text-primary">Apply glue and wait 30 secs</p>
-            </div>
-            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem]">
-                @include('partials.svgcheck')
-                <p class="font-secondary text-primary">Use tweezers</p>
-            </div>
-            <div class="checklist__item flex flex-row min-h-[70px] leading-[70px] items-center px-[2rem]  bg-white">
-                @include('partials.svgcheck')
-                <p class="font-secondary text-primary">Keep eyes open</p>
-            </div>
-        </div>
+        @endif
     </div>
 </div>
 
+
+<a class="button btn btn--outline" data-tab="{{ get_sub_field('quick_link_cat') }}"
+    href="{{ get_sub_field('quick_link_cat') }}">
+    {{ get_sub_field('quick_link') }}
+</a>
 
 
 <div class="mt-[2rem] flex flex-col min-h-[333px] w-full bg-[#D4D7DF] p-[5rem] items-center justify-center">

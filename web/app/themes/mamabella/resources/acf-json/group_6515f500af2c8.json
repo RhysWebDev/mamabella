@@ -70,7 +70,7 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "acfe_display_title": "",
+    "acfe_display_title": "Standalone Featured Image",
     "acfe_autosync": [
         "json"
     ],
@@ -82,5 +82,5 @@
     },
     "acfe_note": "",
     "acfe_form": 0,
-    "modified": 1702505949
+    "modified": 1705054780
 }
